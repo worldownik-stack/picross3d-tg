@@ -38,6 +38,8 @@ WebView по HTTPS-адресу. Всё, что связано с Telegram, из
 2. **Бот.** В [@BotFather](https://t.me/BotFather): `/newbot` → получить токен.
 3. **Mini App.** В @BotFather: `/newapp` (или _Bot Settings → Configure Mini App_) → указать адрес из шага 1.
    Для прямой ссылки `t.me/<bot>/<app>` — короткое имя приложения из `/newapp`.
+   Иконки лежат в `assets/telegram/`: `icon-640.png` — аватар бота (@BotFather → `/setuserpic`),
+   `icon-512.png` — иконка Mini App (`/newapp` или _Edit Bot → Edit Mini App_). Пересобрать: `npm run icon`.
 4. **Кнопка меню и `/start`:**
    ```sh
    export TELEGRAM_BOT_TOKEN=...            # токен из шага 2
