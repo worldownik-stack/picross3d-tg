@@ -19,6 +19,26 @@ async function openLevel(page: Page, levelId: string): Promise<void> {
 /** Клик в кончик пальца руки (рука может быть развёрнута у нижнего края). */
 async function tapHand(page: Page): Promise<void> {
   const hand = page.getByTestId('tutorial-hand');
+  // Рука плавно едет к цели (CSS-переход, камера, пересчёт грани). Под нагрузкой кадры
+  // задерживаются, и неподвижное «положение» — просто не начавшийся переход: ждём два кадра
+  // и конец переходов, затем проверяем, что рука действительно стоит.
+  await hand.evaluate(async (el) => {
+    await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+    await Promise.all(el.getAnimations().map((a) => a.finished.catch(() => undefined)));
+  });
+  let prev = '';
+  let still = 0;
+  await expect
+    .poll(
+      async () => {
+        const cur = JSON.stringify(await hand.boundingBox());
+        still = cur === prev ? still + 1 : 0;
+        prev = cur;
+        return still;
+      },
+      { intervals: [80], timeout: 10_000 },
+    )
+    .toBeGreaterThanOrEqual(3);
   const box = (await hand.boundingBox())!;
   const flip = await hand.evaluate((el) => el.classList.contains('flip'));
   const tx = (flip ? 48 - 20.5 : 20.5) / 48;
@@ -39,8 +59,11 @@ test('обучение: рука указывает на нужное, шаги 
 
   // Стул: рука на кнопке кисти → кисть выбрана → пометка → молоток.
   await openLevel(page, 'tut_03');
+  const brushStep = await text.textContent();
   await tapHand(page);
   await expect(page.getByTestId('tool-brush')).toHaveAttribute('aria-checked', 'true');
+  // Подсказка меняется чуть позже выбора кисти: ждём новый шаг, иначе запомним старый текст.
+  await expect(text).not.toHaveText(brushStep!);
   const markStep = await text.textContent();
   await page.waitForTimeout(400);
   await tapHand(page);
