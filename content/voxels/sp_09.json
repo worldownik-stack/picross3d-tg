@@ -1,0 +1,19 @@
+{
+ "id": "sp_09",
+ "size": [
+  5,
+  9,
+  5
+ ],
+ "palette": [
+  "#8fc3e8",
+  "#7fbf4d",
+  "#b5d67a"
+ ],
+ "cells": "BwABAgMAAwICAAMBAgADARsAAwIBAAUCCgEBAAMBDQABAQQAAQICAAoCCgEBAAMBAwABAQQAAQEDAAMBBwABAwICAQAFAgoBAQADAQ0AAQEJAAECAwACAgEDAgADAQIAAwEVAA==",
+ "stats": {
+  "filled": 93,
+  "fillRatio": 0.413,
+  "colors": 3
+ }
+}

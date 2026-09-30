@@ -1,0 +1,18 @@
+{
+ "id": "ws_02",
+ "size": [
+  7,
+  7,
+  2
+ ],
+ "palette": [
+  "#c8373b",
+  "#c9c4bb"
+ ],
+ "cells": "AgIDAAQCAwACAgIBAwAEAQMABAEDAAkBAQAFAQEAAgIDAAQCAwACAgIBAwAEAQMABAEDAAkBAQAFAQEA",
+ "stats": {
+  "filled": 64,
+  "fillRatio": 0.653,
+  "colors": 2
+ }
+}

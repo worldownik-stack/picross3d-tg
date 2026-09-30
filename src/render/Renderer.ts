@@ -14,6 +14,7 @@ import type { BlockView } from './BlockView';
 import { OrbitCamera, type Insets } from './OrbitCamera';
 import { Particles } from './Particles';
 import { Stage } from './Stage';
+import { ToolFx } from './ToolFx';
 import { CUBE_COLORS, LIGHT_DIR } from './cubeMaterial';
 
 // Цвета задаются и смешиваются «как есть» (sRGB), без преобразований.
@@ -37,6 +38,8 @@ export class Renderer {
   readonly orbit = new OrbitCamera();
   readonly particles = new Particles();
   readonly stage = new Stage();
+  readonly toolFx = new ToolFx();
+  private readonly toolAnim: Animator = (dt) => this.toolFx.update(dt);
   readonly canvas: HTMLCanvasElement;
   private block: BlockView | null = null;
   private readonly animators = new Set<Animator>();
@@ -72,7 +75,7 @@ export class Renderer {
     const hemi = new HemisphereLight(CUBE_COLORS.sky, CUBE_COLORS.ground, 2.5);
     const sun = new DirectionalLight(CUBE_COLORS.light, 1.3);
     sun.position.set(...LIGHT_DIR);
-    this.scene.add(hemi, sun, this.stage.group, this.particles.mesh);
+    this.scene.add(hemi, sun, this.stage.group, this.particles.mesh, this.toolFx.group);
 
     this.canvas.addEventListener('webglcontextlost', (e) => {
       e.preventDefault();
@@ -131,6 +134,12 @@ export class Renderer {
   animate(fn: Animator): void {
     this.animators.add(fn);
     this.invalidate();
+  }
+
+  /** Молоток или кисть у куба с центром `cell` (мир). */
+  playTool(kind: 'hammer' | 'brush', cell: Vector3): void {
+    this.toolFx.play(kind, cell, this.orbit.camera);
+    this.animate(this.toolAnim);
   }
 
   stopAnimation(fn: Animator): void {
@@ -221,6 +230,7 @@ export class Renderer {
     cancelAnimationFrame(this.raf);
     this.ro.disconnect();
     this.stage.dispose();
+    this.toolFx.dispose();
     this.gl.dispose();
     this.canvas.remove();
   }

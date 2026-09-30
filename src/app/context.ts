@@ -4,7 +4,7 @@ import type { SettingsStore } from './settings';
 import type { ContentIndex } from './content';
 import type { LevelStore } from './levels';
 import type { ProgressStore } from './progress';
-import type { SaveManager } from './save';
+import type { Sound } from '../audio/Sound';
 
 /** Общие сервисы, доступные экранам. */
 export interface AppContext {
@@ -14,6 +14,6 @@ export interface AppContext {
   readonly content: ContentIndex;
   readonly levels: LevelStore;
   readonly progress: ProgressStore;
-  readonly save: SaveManager;
+  readonly sound: Sound;
   readonly stage: HTMLElement;
 }

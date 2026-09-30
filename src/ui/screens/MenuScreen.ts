@@ -2,9 +2,12 @@ import type { AppContext } from '../../app/context';
 import { t } from '../../i18n';
 import { button, h } from '../dom';
 import { ICONS } from '../icons';
+import { MenuBackdrop } from '../MenuBackdrop';
 import { Screen } from '../router';
 
 export class MenuScreen extends Screen {
+  private readonly backdrop = new MenuBackdrop();
+
   constructor(private readonly app: AppContext) {
     super('menu');
     const body = h(
@@ -44,8 +47,14 @@ export class MenuScreen extends Screen {
         ),
       ),
     );
-    this.el.append(body);
+    this.el.append(this.backdrop.canvas, body);
   }
 
-  enter(): void {}
+  enter(): void {
+    this.backdrop.start();
+  }
+
+  override leave(): void {
+    this.backdrop.stop();
+  }
 }

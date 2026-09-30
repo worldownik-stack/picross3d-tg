@@ -392,6 +392,19 @@
      "difficulty": 3
     },
     {
+     "id": "home_08",
+     "title": {
+      "ru": "Лампочка",
+      "en": "Light bulb"
+     },
+     "size": [
+      4,
+      6,
+      4
+     ],
+     "difficulty": 2
+    },
+    {
      "id": "home_09",
      "title": {
       "ru": "Домик",
@@ -403,6 +416,19 @@
       4
      ],
      "difficulty": 3
+    },
+    {
+     "id": "home_10",
+     "title": {
+      "ru": "Сапог",
+      "en": "Boot"
+     },
+     "size": [
+      5,
+      6,
+      3
+     ],
+     "difficulty": 2
     }
    ]
   },
@@ -413,7 +439,138 @@
     "en": "Nature"
    },
    "unlockAfter": 7,
-   "levels": []
+   "levels": [
+    {
+     "id": "nat_01",
+     "title": {
+      "ru": "Ёлка",
+      "en": "Fir tree"
+     },
+     "size": [
+      5,
+      6,
+      5
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "nat_02",
+     "title": {
+      "ru": "Дерево",
+      "en": "Tree"
+     },
+     "size": [
+      6,
+      6,
+      6
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "nat_03",
+     "title": {
+      "ru": "Кактус",
+      "en": "Cactus"
+     },
+     "size": [
+      5,
+      6,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "nat_04",
+     "title": {
+      "ru": "Тюльпан",
+      "en": "Tulip"
+     },
+     "size": [
+      3,
+      6,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "nat_05",
+     "title": {
+      "ru": "Подсолнух",
+      "en": "Sunflower"
+     },
+     "size": [
+      5,
+      6,
+      2
+     ],
+     "difficulty": 2
+    },
+    {
+     "id": "nat_06",
+     "title": {
+      "ru": "Снеговик",
+      "en": "Snowman"
+     },
+     "size": [
+      5,
+      7,
+      5
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "nat_07",
+     "title": {
+      "ru": "Радуга",
+      "en": "Rainbow"
+     },
+     "size": [
+      7,
+      6,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "nat_08",
+     "title": {
+      "ru": "Вулкан",
+      "en": "Volcano"
+     },
+     "size": [
+      7,
+      6,
+      7
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "nat_09",
+     "title": {
+      "ru": "Жёлудь",
+      "en": "Acorn"
+     },
+     "size": [
+      5,
+      7,
+      5
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "nat_10",
+     "title": {
+      "ru": "Гора",
+      "en": "Mountain"
+     },
+     "size": [
+      7,
+      6,
+      5
+     ],
+     "difficulty": 3
+    }
+   ]
   },
   {
    "id": "pet",
@@ -435,6 +592,123 @@
       5
      ],
      "difficulty": 3
+    },
+    {
+     "id": "pet_02",
+     "title": {
+      "ru": "Щенок",
+      "en": "Puppy"
+     },
+     "size": [
+      5,
+      7,
+      6
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "pet_03",
+     "title": {
+      "ru": "Кролик",
+      "en": "Bunny"
+     },
+     "size": [
+      5,
+      7,
+      6
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "pet_04",
+     "title": {
+      "ru": "Свинка",
+      "en": "Piggy"
+     },
+     "size": [
+      7,
+      6,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "pet_05",
+     "title": {
+      "ru": "Утка",
+      "en": "Duck"
+     },
+     "size": [
+      6,
+      6,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "pet_06",
+     "title": {
+      "ru": "Цыплёнок",
+      "en": "Chick"
+     },
+     "size": [
+      5,
+      7,
+      6
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "pet_07",
+     "title": {
+      "ru": "Овечка",
+      "en": "Sheep"
+     },
+     "size": [
+      7,
+      5,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "pet_08",
+     "title": {
+      "ru": "Корова",
+      "en": "Cow"
+     },
+     "size": [
+      7,
+      7,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "pet_09",
+     "title": {
+      "ru": "Улитка",
+      "en": "Snail"
+     },
+     "size": [
+      7,
+      6,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "pet_10",
+     "title": {
+      "ru": "Черепаха",
+      "en": "Turtle"
+     },
+     "size": [
+      7,
+      4,
+      5
+     ],
+     "difficulty": 3
     }
    ]
   },
@@ -445,7 +719,138 @@
     "en": "Sea"
    },
    "unlockAfter": 7,
-   "levels": []
+   "levels": [
+    {
+     "id": "sea_01",
+     "title": {
+      "ru": "Кит",
+      "en": "Whale"
+     },
+     "size": [
+      7,
+      6,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "sea_02",
+     "title": {
+      "ru": "Рыбка",
+      "en": "Fish"
+     },
+     "size": [
+      7,
+      6,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "sea_03",
+     "title": {
+      "ru": "Осьминог",
+      "en": "Octopus"
+     },
+     "size": [
+      7,
+      6,
+      7
+     ],
+     "difficulty": 4
+    },
+    {
+     "id": "sea_04",
+     "title": {
+      "ru": "Краб",
+      "en": "Crab"
+     },
+     "size": [
+      7,
+      5,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "sea_05",
+     "title": {
+      "ru": "Морская звезда",
+      "en": "Starfish"
+     },
+     "size": [
+      7,
+      7,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "sea_06",
+     "title": {
+      "ru": "Медуза",
+      "en": "Jellyfish"
+     },
+     "size": [
+      7,
+      8,
+      7
+     ],
+     "difficulty": 4
+    },
+    {
+     "id": "sea_07",
+     "title": {
+      "ru": "Морской конёк",
+      "en": "Seahorse"
+     },
+     "size": [
+      5,
+      8,
+      2
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "sea_08",
+     "title": {
+      "ru": "Акула",
+      "en": "Shark"
+     },
+     "size": [
+      8,
+      5,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "sea_09",
+     "title": {
+      "ru": "Пингвин",
+      "en": "Penguin"
+     },
+     "size": [
+      5,
+      7,
+      6
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "sea_10",
+     "title": {
+      "ru": "Дельфин",
+      "en": "Dolphin"
+     },
+     "size": [
+      8,
+      6,
+      3
+     ],
+     "difficulty": 3
+    }
+   ]
   },
   {
    "id": "tr",
@@ -456,6 +861,58 @@
    "unlockAfter": 7,
    "levels": [
     {
+     "id": "tr_01",
+     "title": {
+      "ru": "Машинка",
+      "en": "Car"
+     },
+     "size": [
+      7,
+      4,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "tr_02",
+     "title": {
+      "ru": "Автобус",
+      "en": "Bus"
+     },
+     "size": [
+      8,
+      5,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "tr_03",
+     "title": {
+      "ru": "Пожарная машина",
+      "en": "Fire truck"
+     },
+     "size": [
+      8,
+      5,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "tr_04",
+     "title": {
+      "ru": "Паровоз",
+      "en": "Steam engine"
+     },
+     "size": [
+      8,
+      6,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
      "id": "tr_05",
      "title": {
       "ru": "Самолёт",
@@ -464,6 +921,71 @@
      "size": [
       8,
       3,
+      7
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "tr_06",
+     "title": {
+      "ru": "Вертолёт",
+      "en": "Helicopter"
+     },
+     "size": [
+      8,
+      6,
+      5
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "tr_07",
+     "title": {
+      "ru": "Парусник",
+      "en": "Sailboat"
+     },
+     "size": [
+      7,
+      8,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "tr_08",
+     "title": {
+      "ru": "Подлодка",
+      "en": "Submarine"
+     },
+     "size": [
+      8,
+      6,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "tr_09",
+     "title": {
+      "ru": "Трактор",
+      "en": "Tractor"
+     },
+     "size": [
+      8,
+      6,
+      5
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "tr_10",
+     "title": {
+      "ru": "Воздушный шар",
+      "en": "Hot air balloon"
+     },
+     "size": [
+      7,
+      8,
       7
      ],
      "difficulty": 3
@@ -477,7 +999,138 @@
     "en": "Toys & Music"
    },
    "unlockAfter": 7,
-   "levels": []
+   "levels": [
+    {
+     "id": "toy_01",
+     "title": {
+      "ru": "Гитара",
+      "en": "Guitar"
+     },
+     "size": [
+      5,
+      8,
+      2
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "toy_02",
+     "title": {
+      "ru": "Барабан",
+      "en": "Drum"
+     },
+     "size": [
+      7,
+      5,
+      7
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "toy_03",
+     "title": {
+      "ru": "Труба",
+      "en": "Trumpet"
+     },
+     "size": [
+      8,
+      4,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "toy_04",
+     "title": {
+      "ru": "Рояль",
+      "en": "Grand piano"
+     },
+     "size": [
+      7,
+      6,
+      6
+     ],
+     "difficulty": 4
+    },
+    {
+     "id": "toy_05",
+     "title": {
+      "ru": "Геймпад",
+      "en": "Gamepad"
+     },
+     "size": [
+      8,
+      5,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "toy_06",
+     "title": {
+      "ru": "Ладья",
+      "en": "Rook"
+     },
+     "size": [
+      5,
+      8,
+      5
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "toy_07",
+     "title": {
+      "ru": "Конь",
+      "en": "Knight"
+     },
+     "size": [
+      5,
+      9,
+      5
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "toy_08",
+     "title": {
+      "ru": "Юла",
+      "en": "Spinning top"
+     },
+     "size": [
+      7,
+      7,
+      7
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "toy_09",
+     "title": {
+      "ru": "Мишка",
+      "en": "Teddy bear"
+     },
+     "size": [
+      7,
+      9,
+      6
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "toy_10",
+     "title": {
+      "ru": "Лошадка-качалка",
+      "en": "Rocking horse"
+     },
+     "size": [
+      9,
+      7,
+      3
+     ],
+     "difficulty": 3
+    }
+   ]
   },
   {
    "id": "ws",
@@ -486,7 +1139,138 @@
     "en": "Workshop"
    },
    "unlockAfter": 7,
-   "levels": []
+   "levels": [
+    {
+     "id": "ws_01",
+     "title": {
+      "ru": "Наковальня",
+      "en": "Anvil"
+     },
+     "size": [
+      9,
+      6,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "ws_02",
+     "title": {
+      "ru": "Магнит",
+      "en": "Magnet"
+     },
+     "size": [
+      7,
+      7,
+      2
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "ws_03",
+     "title": {
+      "ru": "Ящик для инструментов",
+      "en": "Toolbox"
+     },
+     "size": [
+      7,
+      6,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "ws_04",
+     "title": {
+      "ru": "Молоток",
+      "en": "Hammer"
+     },
+     "size": [
+      7,
+      8,
+      2
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "ws_05",
+     "title": {
+      "ru": "Гаечный ключ",
+      "en": "Wrench"
+     },
+     "size": [
+      5,
+      9,
+      2
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "ws_06",
+     "title": {
+      "ru": "Банка краски",
+      "en": "Paint can"
+     },
+     "size": [
+      5,
+      8,
+      5
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "ws_07",
+     "title": {
+      "ru": "Топор в пне",
+      "en": "Axe in a stump"
+     },
+     "size": [
+      7,
+      8,
+      7
+     ],
+     "difficulty": 4
+    },
+    {
+     "id": "ws_08",
+     "title": {
+      "ru": "Фонарь",
+      "en": "Lantern"
+     },
+     "size": [
+      5,
+      8,
+      5
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "ws_09",
+     "title": {
+      "ru": "Замок",
+      "en": "Padlock"
+     },
+     "size": [
+      5,
+      7,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "ws_10",
+     "title": {
+      "ru": "Тачка",
+      "en": "Wheelbarrow"
+     },
+     "size": [
+      9,
+      5,
+      3
+     ],
+     "difficulty": 3
+    }
+   ]
   },
   {
    "id": "fx",
@@ -495,7 +1279,138 @@
     "en": "Tales & Holidays"
    },
    "unlockAfter": 7,
-   "levels": []
+   "levels": [
+    {
+     "id": "fx_01",
+     "title": {
+      "ru": "Башня замка",
+      "en": "Castle tower"
+     },
+     "size": [
+      7,
+      9,
+      7
+     ],
+     "difficulty": 4
+    },
+    {
+     "id": "fx_02",
+     "title": {
+      "ru": "Дракончик",
+      "en": "Baby dragon"
+     },
+     "size": [
+      7,
+      9,
+      7
+     ],
+     "difficulty": 4
+    },
+    {
+     "id": "fx_03",
+     "title": {
+      "ru": "Сундук",
+      "en": "Treasure chest"
+     },
+     "size": [
+      7,
+      7,
+      6
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "fx_04",
+     "title": {
+      "ru": "Корона",
+      "en": "Crown"
+     },
+     "size": [
+      7,
+      5,
+      7
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "fx_05",
+     "title": {
+      "ru": "Зелье",
+      "en": "Potion"
+     },
+     "size": [
+      5,
+      8,
+      5
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "fx_06",
+     "title": {
+      "ru": "Шляпа волшебника",
+      "en": "Wizard hat"
+     },
+     "size": [
+      9,
+      9,
+      9
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "fx_07",
+     "title": {
+      "ru": "Тыква-фонарь",
+      "en": "Jack-o'-lantern"
+     },
+     "size": [
+      9,
+      8,
+      9
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "fx_08",
+     "title": {
+      "ru": "Подарок",
+      "en": "Gift"
+     },
+     "size": [
+      7,
+      8,
+      7
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "fx_09",
+     "title": {
+      "ru": "Торт",
+      "en": "Birthday cake"
+     },
+     "size": [
+      9,
+      9,
+      9
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "fx_10",
+     "title": {
+      "ru": "Привидение",
+      "en": "Ghost"
+     },
+     "size": [
+      7,
+      9,
+      7
+     ],
+     "difficulty": 3
+    }
+   ]
   },
   {
    "id": "sp",
@@ -504,7 +1419,138 @@
     "en": "Space & Science"
    },
    "unlockAfter": 7,
-   "levels": []
+   "levels": [
+    {
+     "id": "sp_01",
+     "title": {
+      "ru": "Ракета",
+      "en": "Rocket"
+     },
+     "size": [
+      7,
+      10,
+      6
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "sp_02",
+     "title": {
+      "ru": "НЛО",
+      "en": "UFO"
+     },
+     "size": [
+      9,
+      5,
+      9
+     ],
+     "difficulty": 4
+    },
+    {
+     "id": "sp_03",
+     "title": {
+      "ru": "Планета с кольцом",
+      "en": "Ringed planet"
+     },
+     "size": [
+      10,
+      7,
+      10
+     ],
+     "difficulty": 4
+    },
+    {
+     "id": "sp_04",
+     "title": {
+      "ru": "Шлем космонавта",
+      "en": "Space helmet"
+     },
+     "size": [
+      7,
+      7,
+      7
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "sp_05",
+     "title": {
+      "ru": "Спутник",
+      "en": "Satellite"
+     },
+     "size": [
+      10,
+      5,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "sp_06",
+     "title": {
+      "ru": "Робот",
+      "en": "Robot"
+     },
+     "size": [
+      7,
+      10,
+      5
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "sp_07",
+     "title": {
+      "ru": "Микроскоп",
+      "en": "Microscope"
+     },
+     "size": [
+      6,
+      9,
+      5
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "sp_08",
+     "title": {
+      "ru": "Телескоп",
+      "en": "Telescope"
+     },
+     "size": [
+      9,
+      9,
+      6
+     ],
+     "difficulty": 4
+    },
+    {
+     "id": "sp_09",
+     "title": {
+      "ru": "Колба",
+      "en": "Flask"
+     },
+     "size": [
+      5,
+      9,
+      5
+     ],
+     "difficulty": 4
+    },
+    {
+     "id": "sp_10",
+     "title": {
+      "ru": "Луноход",
+      "en": "Moon rover"
+     },
+     "size": [
+      8,
+      6,
+      7
+     ],
+     "difficulty": 4
+    }
+   ]
   }
  ]
 }

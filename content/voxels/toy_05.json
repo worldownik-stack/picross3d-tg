@@ -1,0 +1,22 @@
+{
+ "id": "toy_05",
+ "size": [
+  8,
+  5,
+  3
+ ],
+ "palette": [
+  "#4a4745",
+  "#262424",
+  "#4f9a3e",
+  "#c9c4bb",
+  "#c8373b",
+  "#f6d155"
+ ],
+ "cells": "AgEEABoBAQAGAQEAAgEEABoBAQAGAQoAAQIEAAEDAQADAgIAAQMBAAEGAQABAgEAAgQBAAEFCQA=",
+ "stats": {
+  "filled": 79,
+  "fillRatio": 0.658,
+  "colors": 6
+ }
+}

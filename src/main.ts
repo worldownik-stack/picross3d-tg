@@ -4,10 +4,11 @@ import { applyUiScale, lockPageGestures } from './app/viewport';
 import { createPlatform } from './platform';
 import { resolveLang, setLang, t } from './i18n';
 import { loadContentIndex } from './app/content';
-import { SettingsStore } from './app/settings';
-import { ProgressStore } from './app/progress';
-import { SaveManager } from './app/save';
+import { SETTINGS_KEY, SettingsStore } from './app/settings';
 import { LevelStore } from './app/levels';
+import { PROGRESS_KEY, ProgressStore } from './app/progress';
+import { SaveStore } from './app/save';
+import { Sound } from './audio/Sound';
 import type { AppContext } from './app/context';
 import { Router, type Screen, type ScreenId } from './ui/router';
 import { setModalLayer, toast, topModal } from './ui/modal';
@@ -52,7 +53,15 @@ async function boot(): Promise<void> {
         document.fonts.load('800 32px Nunito', 'Ж'),
       ])
     : Promise.resolve();
-  const [content] = await Promise.all([loadContentIndex(), fontReady.catch(() => undefined)]);
+  const save = new SaveStore((blob, flush) => platform.saveData(blob, flush));
+  const progress = new ProgressStore(save);
+  const [content, saved] = await Promise.all([
+    loadContentIndex(),
+    platform.loadData().catch(() => null),
+    fontReady.catch(() => undefined),
+  ]);
+  save.load(saved);
+  progress.load(save.get(PROGRESS_KEY));
   setBootProgress(0.8);
 
   const ui = document.getElementById('ui')!;
@@ -62,9 +71,16 @@ async function boot(): Promise<void> {
   modalLayer.className = 'modal-layer';
 
   const settings = new SettingsStore();
-  const progress = new ProgressStore();
-  const save = new SaveManager(platform, settings, progress);
-  await save.start();
+  settings.loadSaved(save.get(SETTINGS_KEY));
+  settings.subscribe((s) => save.set(SETTINGS_KEY, { ...s }, false));
+  const sound = new Sound(settings);
+  sound.installUnlock();
+  platform.onPause(() => sound.setPaused(true));
+  platform.onResume(() => sound.setPaused(false));
+  // Тихий щелчок на кнопках и карточках интерфейса.
+  ui.addEventListener('click', (e) => {
+    if ((e.target as Element | null)?.closest('.btn, .card, .slot, .toggle-row')) sound.play('tap');
+  });
   const screens: Record<ScreenId, (app: AppContext) => Screen> = {
     menu: (a) => new MenuScreen(a),
     packs: (a) => new PacksScreen(a),
@@ -82,9 +98,9 @@ async function boot(): Promise<void> {
     settings,
     content,
     stage,
-    levels: new LevelStore(content),
     progress,
-    save,
+    sound,
+    levels: new LevelStore(content),
   };
 
   ui.append(modalLayer);
@@ -115,6 +131,8 @@ async function boot(): Promise<void> {
   hideBoot();
   // Главное меню интерактивно — сообщаем платформе ровно один раз (п. 1.19.2).
   platform.loadingReady();
+  // Музыка — после ready() (§9); заиграет с первым жестом, если включена.
+  sound.startMusic();
 
   if (__DEBUG__ && new URLSearchParams(location.search).has('debug')) {
     const { installDebug } = await import('./debug/debug');

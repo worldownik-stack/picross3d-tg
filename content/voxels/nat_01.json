@@ -1,0 +1,19 @@
+{
+ "id": "nat_01",
+ "size": [
+  5,
+  6,
+  5
+ ],
+ "palette": [
+  "#2f6b3a",
+  "#4f9a3e",
+  "#8b5a2b"
+ ],
+ "cells": "BgADAQMAAQIWAAUBAQADAgIAAwEDAAECCQABAwIABQEFAgEAAwECAAMCAwABAQcABQEBAAMCAgADAQMAAQINAAMBAwABAhEA",
+ "stats": {
+  "filled": 50,
+  "fillRatio": 0.333,
+  "colors": 3
+ }
+}

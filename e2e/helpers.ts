@@ -16,10 +16,12 @@ export async function openApp(page: Page, query = 'debug=1&lang=ru'): Promise<vo
   await page.waitForFunction(() => 'debug' in window || '__debug' in window);
 }
 
-export async function platformLog(page: Page): Promise<string[]> {
-  return page.evaluate(() =>
+/** Журнал вызовов платформы; сохранения (`save`, `save:flush`) — только при `withSaves`. */
+export async function platformLog(page: Page, withSaves = false): Promise<string[]> {
+  const log = await page.evaluate(() =>
     (window as unknown as { __debug: { platformLog(): string[] } }).__debug.platformLog(),
   );
+  return withSaves ? log : log.filter((e) => !e.startsWith('save'));
 }
 
 export async function expectNoScroll(page: Page): Promise<void> {

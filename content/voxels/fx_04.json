@@ -1,0 +1,20 @@
+{
+ "id": "fx_04",
+ "size": [
+  7,
+  5,
+  7
+ ],
+ "palette": [
+  "#f6d155",
+  "#c9a227",
+  "#c8373b",
+  "#4f86c6"
+ ],
+ "cells": "AgADAgQAAQEBAwEBBQABAQYAAQEGAAECBAACAgEAAgICAAIBAQACAQIAAQEDAAEBDwACAgMAAgICAQMAAgEVAAECBQABAgEEBQABBAEBBQACAQUAAQEBAgUAAwIDAAICAgEDAAIBFgACAgEAAgICAAIBAQACAQIAAQEDAAEBEQADAgQAAQEBAwEBBQABAQYAAQEGAAECAwA=",
+ "stats": {
+  "filled": 64,
+  "fillRatio": 0.261,
+  "colors": 4
+ }
+}

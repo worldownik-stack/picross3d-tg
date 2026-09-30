@@ -155,10 +155,9 @@ test.describe('уровень', () => {
     await expect(page.getByTestId('result-sheet')).toBeVisible({ timeout: 8000 });
     await expect(page.getByTestId('win-title')).toHaveText('Ступенька');
     await expect(page.locator('.result-sheet .stars .on')).toHaveCount(2);
-    // Итог уровня: геймплей остановлен (сохранение результата в журнал не считается).
-    const gameplayLog = (await platformLog(page)).filter((x) => x === 'start' || x === 'stop');
-    expect(gameplayLog.at(-1)).toBe('stop');
-    expect(await platformLog(page)).toContain('save:flush');
+    expect((await platformLog(page)).at(-1)).toBe('stop');
+    // Прогресс записан сразу, с немедленной отправкой.
+    expect((await platformLog(page, true)).at(-1)).toBe('save:flush');
     await expectNoScroll(page);
     expect(errors).toEqual([]);
 
