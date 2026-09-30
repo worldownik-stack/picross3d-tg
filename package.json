@@ -28,6 +28,7 @@
     "meshy:preview": "tsx tools/meshy-preview.ts",
     "pack": "npm run build && tsx tools/pack.ts",
     "bot": "tsx tools/telegram-bot.ts",
+    "icon": "tsx tools/render-icon.ts",
     "release:preview": "npm run pack && tsx tools/standalone.ts"
   },
   "dependencies": {
