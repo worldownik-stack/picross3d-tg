@@ -375,6 +375,8 @@ export class GameScreen extends Screen {
     this.titleEl.textContent = tx(level.title);
     this.titleEl.classList.add('shown');
     const s = ctl.session;
+    const { previous, best } = this.app.progress.record(level.id, s.stars(), s.elapsed);
+    void this.app.save.flush();
     clear(this.sheet);
     this.sheet.append(
       starsEl(s.stars()),
@@ -393,6 +395,14 @@ export class GameScreen extends Screen {
           h('span', { text: t('result.mistakes') }),
           h('b', { text: String(s.totalMistakes) }),
         ),
+        previous
+          ? h(
+              'div',
+              null,
+              h('span', { text: t('result.bestTime') }),
+              h('b', { text: formatTime(best.time) }),
+            )
+          : null,
       ),
       h(
         'div',
@@ -431,12 +441,22 @@ export class GameScreen extends Screen {
     this.titleEl.textContent = '';
   }
 
+  /** Открыт ли набор для игрока (в debug-режиме открыто всё). */
+  private isOpen(packId: string): boolean {
+    if (__DEBUG__ && new URLSearchParams(location.search).has('debug')) return true;
+    const packs = this.app.content.packs.filter((p) => !p.debugOnly);
+    return this.app.progress.isPackUnlocked(
+      packs,
+      packs.findIndex((p) => p.id === packId),
+    );
+  }
+
   private async next(): Promise<void> {
     const cur = this.params;
     const nxt = this.app.levels.next(cur.packId ?? '', cur.levelId ?? '');
     await this.app.platform.showFullscreenAd();
     if (!this.active) return;
-    if (nxt) void this.app.router.go('game', nxt);
+    if (nxt && this.isOpen(nxt.packId)) void this.app.router.go('game', nxt);
     else void this.app.router.go('packs');
   }
 

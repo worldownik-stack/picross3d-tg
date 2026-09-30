@@ -4,7 +4,9 @@ import { applyUiScale, lockPageGestures } from './app/viewport';
 import { createPlatform } from './platform';
 import { resolveLang, setLang, t } from './i18n';
 import { loadContentIndex } from './app/content';
-import { SettingsStore, type Settings } from './app/settings';
+import { SettingsStore } from './app/settings';
+import { ProgressStore } from './app/progress';
+import { SaveManager } from './app/save';
 import { LevelStore } from './app/levels';
 import type { AppContext } from './app/context';
 import { Router, type Screen, type ScreenId } from './ui/router';
@@ -59,9 +61,10 @@ async function boot(): Promise<void> {
   const modalLayer = document.createElement('div');
   modalLayer.className = 'modal-layer';
 
-  const saved = await platform.loadData().catch(() => null);
-  const settings = new SettingsStore(saved?.settings as Partial<Settings> | undefined);
-  settings.subscribe((s) => void platform.saveData({ v: 1, settings: s }, false));
+  const settings = new SettingsStore();
+  const progress = new ProgressStore();
+  const save = new SaveManager(platform, settings, progress);
+  await save.start();
   const screens: Record<ScreenId, (app: AppContext) => Screen> = {
     menu: (a) => new MenuScreen(a),
     packs: (a) => new PacksScreen(a),
@@ -73,7 +76,16 @@ async function boot(): Promise<void> {
   // eslint-disable-next-line prefer-const
   let app: AppContext;
   const router = new Router(ui, (id) => screens[id](app));
-  app = { platform, router, settings, content, stage, levels: new LevelStore(content) };
+  app = {
+    platform,
+    router,
+    settings,
+    content,
+    stage,
+    levels: new LevelStore(content),
+    progress,
+    save,
+  };
 
   ui.append(modalLayer);
   setModalLayer(modalLayer);

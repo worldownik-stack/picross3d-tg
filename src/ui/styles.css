@@ -391,6 +391,10 @@ button {
   padding: 0.3rem;
   font-size: 1.5rem;
 }
+.level-grid .card .stars .icon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
 .stars {
   display: inline-flex;
   gap: 0.1rem;
