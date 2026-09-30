@@ -1,0 +1,7 @@
+{"version":1,"pack":"tut","levels":[
+{"id":"tut_01","pack":"tut","title":{"ru":"Ступенька","en":"Step"},"size":[3,3,2],"ruleset":"classic","cells":"AwICAQEAAQECAAMCAgEBAAEBAgA=","palette":["#d19a5b","#a8703f"],"hidden":{"x":"","y":"","z":""},"difficulty":1,"targetTime":30,"anim":"hop"},
+{"id":"tut_02","pack":"tut","title":{"ru":"Буква «Т»","en":"Letter T"},"size":[5,5,1],"ruleset":"classic","cells":"AgABAQQAAQEEAAEBBAABAQIABQE=","palette":["#2aa99b"],"hidden":{"x":"","y":"","z":"////AQ=="},"difficulty":1,"targetTime":30,"anim":"spin"},
+{"id":"tut_03","pack":"tut","title":{"ru":"Стул","en":"Chair"},"size":[3,5,3],"ruleset":"classic","cells":"AQIBAAICAQABAgMBDAADAQYAAQIBAAICAQABAgkB","palette":["#c0392b","#7a4a2a"],"hidden":{"x":"Aww=","y":"","z":"LQA="},"difficulty":1,"targetTime":40,"anim":"wobble"},
+{"id":"tut_04","pack":"tut","title":{"ru":"Стол","en":"Table"},"size":[5,3,4],"ruleset":"classic","cells":"AQIDAAICAwABAgUBCgAFAQoABQEBAgMAAgIDAAECBQE=","palette":["#c98b52","#8a5a33"],"hidden":{"x":"AwY=","y":"","z":"MQI="},"difficulty":1,"targetTime":40,"anim":"bob"},
+{"id":"tut_05","pack":"tut","title":{"ru":"Домик","en":"Little house"},"size":[5,5,4],"ruleset":"classic","cells":"AQQBAAMEAQEBAAEBAQAGAQUCAQADAgEABQQKAQUCAQADAgEABQQKAQUCAQADAgEDBQQDAQEABgEFAgEAAwIBAA==","palette":["#f6d49b","#c8553d","#7d5a45","#a8876a"],"hidden":{"x":"","y":"","z":""},"difficulty":1,"targetTime":30,"anim":"hop"}
+]}

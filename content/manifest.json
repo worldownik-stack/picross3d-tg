@@ -1,0 +1,3715 @@
+{
+  "version": 1,
+  "packs": [
+    {
+      "id": "tut",
+      "title": {
+        "ru": "Обучение",
+        "en": "Tutorial"
+      },
+      "unlockAfter": 0,
+      "targetHidden": 0,
+      "hideFirst": [2, 3],
+      "levels": [
+        {
+          "id": "tut_01",
+          "title": {
+            "ru": "Ступенька",
+            "en": "Step"
+          },
+          "source": {
+            "kind": "dsl",
+            "shape": "tutSteps"
+          },
+          "difficulty": 1,
+          "anim": "hop"
+        },
+        {
+          "id": "tut_02",
+          "title": {
+            "ru": "Буква «Т»",
+            "en": "Letter T"
+          },
+          "source": {
+            "kind": "dsl",
+            "shape": "tutLetterT"
+          },
+          "difficulty": 1,
+          "anim": "spin"
+        },
+        {
+          "id": "tut_03",
+          "title": {
+            "ru": "Стул",
+            "en": "Chair"
+          },
+          "source": {
+            "kind": "dsl",
+            "shape": "tutChair"
+          },
+          "difficulty": 1,
+          "anim": "wobble"
+        },
+        {
+          "id": "tut_04",
+          "title": {
+            "ru": "Стол",
+            "en": "Table"
+          },
+          "source": {
+            "kind": "dsl",
+            "shape": "tutTable"
+          },
+          "difficulty": 1,
+          "anim": "bob"
+        },
+        {
+          "id": "tut_05",
+          "title": {
+            "ru": "Домик",
+            "en": "Little house"
+          },
+          "source": {
+            "kind": "dsl",
+            "shape": "tutHouse"
+          },
+          "difficulty": 1,
+          "anim": "hop",
+          "hideFirst": []
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": {
+        "ru": "Тест 10×10×10",
+        "en": "Test 10×10×10"
+      },
+      "debugOnly": true,
+      "unlockAfter": 0,
+      "targetHidden": 0.45,
+      "hideFirst": [],
+      "levels": [
+        {
+          "id": "test_01",
+          "title": {
+            "ru": "Шар",
+            "en": "Ball"
+          },
+          "source": {
+            "kind": "dsl",
+            "shape": "testBall"
+          },
+          "anim": "spin"
+        },
+        {
+          "id": "test_02",
+          "title": {
+            "ru": "Пирамида",
+            "en": "Pyramid"
+          },
+          "source": {
+            "kind": "dsl",
+            "shape": "testPyramid"
+          },
+          "anim": "bob"
+        },
+        {
+          "id": "test_03",
+          "title": {
+            "ru": "Кружка",
+            "en": "Mug"
+          },
+          "source": {
+            "kind": "dsl",
+            "shape": "testMug"
+          },
+          "anim": "wobble"
+        },
+        {
+          "id": "test_04",
+          "title": {
+            "ru": "Бублик",
+            "en": "Donut"
+          },
+          "source": {
+            "kind": "dsl",
+            "shape": "testDonut"
+          },
+          "anim": "spin"
+        },
+        {
+          "id": "test_05",
+          "title": {
+            "ru": "Гриб",
+            "en": "Mushroom"
+          },
+          "source": {
+            "kind": "dsl",
+            "shape": "testMushroom"
+          },
+          "anim": "hop"
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": {
+        "ru": "Еда",
+        "en": "Food"
+      },
+      "unlockAfter": 0,
+      "targetHidden": 0.2,
+      "hideFirst": [2, 3],
+      "levels": [
+        {
+          "id": "food_01",
+          "title": {
+            "ru": "Яблоко",
+            "en": "Apple"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a round apple with a short stem and one leaf",
+            "colors": "red apple, brown stem, green leaf",
+            "maxSize": 5,
+            "edits": {
+              "add": [
+                {
+                  "min": [2, 3, 2],
+                  "max": [2, 3, 2],
+                  "color": "#8b5a2b"
+                },
+                {
+                  "min": [1, 3, 2],
+                  "max": [1, 3, 2],
+                  "color": "#7fbf4d"
+                }
+              ]
+            }
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e11e-8c42-739a-909f-6c04eff248c9",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T04:29:23.527Z"
+            },
+            "refine": {
+              "taskId": "01a0e11f-94da-707c-b4fa-7460182cf090",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T04:30:30.418Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "food_02",
+          "title": {
+            "ru": "Гриб",
+            "en": "Mushroom"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a chubby mushroom with a wide dome cap and a thick short stem",
+            "colors": "red cap, cream stem",
+            "maxSize": 5,
+            "threshold": 0.15
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e157-8ca0-7454-8c0f-30af0528eab8",
+              "status": "succeeded",
+              "credits": 5,
+              "params": {
+                "mode": "preview",
+                "ai_model": "meshy-5",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:31:53.516Z"
+            },
+            "refine": {
+              "taskId": "01a0e158-de4e-71df-a477-522b8eb2df3d",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "meshy-5",
+                "enable_pbr": false,
+                "remove_lighting": false,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:32:59.784Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "food_03",
+          "title": {
+            "ru": "Морковка",
+            "en": "Carrot"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a carrot lying horizontally with a leafy top",
+            "colors": "orange carrot, green leaves",
+            "maxSize": 6,
+            "threshold": 0.03,
+            "palette": ["#f08a3c", "#7fbf4d"],
+            "edits": {
+              "remove": [
+                {
+                  "min": [1, 0, 0],
+                  "max": [1, 0, 0]
+                }
+              ],
+              "add": [
+                {
+                  "min": [0, 2, 3],
+                  "max": [1, 2, 3],
+                  "color": "#7fbf4d"
+                }
+              ]
+            }
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e168-0ddc-730a-9f41-6aad7b5931c9",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:28.392Z"
+            },
+            "refine": {
+              "taskId": "01a0e16a-3fb7-76f6-bd75-74a4f9e831cc",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:36.176Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "food_04",
+          "title": {
+            "ru": "Арбуз",
+            "en": "Watermelon"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a thick triangular watermelon slice standing upright",
+            "colors": "red flesh, white stripe, green rind",
+            "maxSize": 5,
+            "palette": ["#c8373b", "#2f6b3a", "#262424"],
+            "edits": {
+              "paint": [
+                {
+                  "min": [0, 0, 0],
+                  "max": [3, 3, 0],
+                  "color": "#2f6b3a"
+                },
+                {
+                  "min": [0, 1, 1],
+                  "max": [3, 3, 1],
+                  "color": "#c8373b"
+                },
+                {
+                  "min": [0, 0, 1],
+                  "max": [3, 0, 1],
+                  "color": "#2f6b3a"
+                },
+                {
+                  "min": [1, 2, 1],
+                  "max": [1, 2, 1],
+                  "color": "#262424"
+                },
+                {
+                  "min": [2, 1, 1],
+                  "max": [2, 1, 1],
+                  "color": "#262424"
+                }
+              ]
+            }
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e168-16d4-752b-9e21-9677c0f3f55b",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:28.750Z"
+            },
+            "refine": {
+              "taskId": "01a0e16a-4738-7453-974d-f3dc63205b47",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:36.540Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "food_05",
+          "title": {
+            "ru": "Мороженое",
+            "en": "Ice cream"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "an ice cream cone with one big round scoop",
+            "colors": "tan waffle cone, pink scoop",
+            "maxSize": 6,
+            "threshold": 0.25,
+            "palette": ["#f5b04a", "#ef8fb3"],
+            "edits": {
+              "add": [
+                {
+                  "min": [0, 3, 0],
+                  "max": [2, 3, 2],
+                  "color": "#ef8fb3"
+                }
+              ]
+            }
+          },
+          "anim": "wobble",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e168-21e2-7684-8402-d7ae83111c07",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:29.102Z"
+            },
+            "refine": {
+              "taskId": "01a0e16a-4e5c-7575-bb0a-c5139f1f5cf4",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:36.903Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "food_06",
+          "title": {
+            "ru": "Кекс",
+            "en": "Cupcake"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a cupcake with a tall swirl of frosting and a cherry on top",
+            "colors": "brown cup, white frosting, red cherry",
+            "maxSize": 6,
+            "palette": ["#8b5a2b", "#b98252", "#f7f3ea", "#c8373b"],
+            "edits": {
+              "add": [
+                {
+                  "min": [1, 5, 2],
+                  "max": [1, 5, 2],
+                  "color": "#c8373b"
+                }
+              ],
+              "paint": [
+                {
+                  "min": [0, 0, 0],
+                  "max": [3, 1, 3],
+                  "color": "#8b5a2b"
+                },
+                {
+                  "min": [0, 2, 0],
+                  "max": [3, 4, 3],
+                  "color": "#f7f3ea"
+                }
+              ]
+            }
+          },
+          "anim": "wobble",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e168-2b61-708b-9b4f-f9dd40a04972",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:29.460Z"
+            },
+            "refine": {
+              "taskId": "01a0e16a-578a-7051-9702-9ca8cb8f5034",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:37.261Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "food_07",
+          "title": {
+            "ru": "Пончик",
+            "en": "Donut"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a thick donut ring lying flat",
+            "colors": "tan dough, pink glaze on top",
+            "maxSize": 6,
+            "palette": ["#d0587e", "#f5b04a"]
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e168-3255-7355-ac57-efd1c2077c95",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:29.806Z"
+            },
+            "refine": {
+              "taskId": "01a0e16a-5f09-7551-8492-890fd8506666",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:37.618Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "food_08",
+          "title": {
+            "ru": "Сыр",
+            "en": "Cheese"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a thick wedge of cheese with a few big round holes",
+            "colors": "yellow cheese",
+            "maxSize": 6,
+            "palette": ["#f6d155"],
+            "edits": {
+              "remove": [
+                {
+                  "min": [1, 1, 2],
+                  "max": [1, 1, 2]
+                },
+                {
+                  "min": [3, 2, 2],
+                  "max": [3, 2, 2]
+                },
+                {
+                  "min": [4, 1, 2],
+                  "max": [4, 1, 2]
+                },
+                {
+                  "min": [2, 3, 1],
+                  "max": [2, 3, 1]
+                },
+                {
+                  "min": [4, 3, 0],
+                  "max": [4, 3, 0]
+                },
+                {
+                  "min": [5, 2, 1],
+                  "max": [5, 2, 1]
+                },
+                {
+                  "min": [0, 1, 1],
+                  "max": [0, 1, 1]
+                }
+              ]
+            }
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e168-3985-74a1-a2bb-fa03bddd9a48",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:30.166Z"
+            },
+            "refine": {
+              "taskId": "01a0e16a-67bd-7600-92df-17cbe347f2df",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:37.973Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "food_09",
+          "title": {
+            "ru": "Бургер",
+            "en": "Burger"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a tall hamburger with bun, patty, cheese and lettuce layers",
+            "colors": "tan bun, brown patty, yellow cheese, green lettuce",
+            "maxSize": 6,
+            "palette": ["#d9772f", "#5e3a22", "#f6d155", "#4f9a3e"],
+            "edits": {
+              "add": [
+                {
+                  "min": [1, 1, 0],
+                  "max": [3, 1, 4],
+                  "color": "#5e3a22"
+                },
+                {
+                  "min": [0, 1, 1],
+                  "max": [4, 1, 3],
+                  "color": "#5e3a22"
+                },
+                {
+                  "min": [1, 2, 0],
+                  "max": [3, 2, 4],
+                  "color": "#f6d155"
+                },
+                {
+                  "min": [0, 2, 1],
+                  "max": [4, 2, 3],
+                  "color": "#f6d155"
+                },
+                {
+                  "min": [1, 3, 0],
+                  "max": [3, 3, 4],
+                  "color": "#4f9a3e"
+                },
+                {
+                  "min": [0, 3, 1],
+                  "max": [4, 3, 3],
+                  "color": "#4f9a3e"
+                }
+              ],
+              "paint": [
+                {
+                  "min": [0, 0, 0],
+                  "max": [4, 0, 4],
+                  "color": "#d9772f"
+                },
+                {
+                  "min": [0, 4, 0],
+                  "max": [4, 5, 4],
+                  "color": "#d9772f"
+                }
+              ]
+            }
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e168-4326-7176-8a40-25f7f940eea5",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:30.534Z"
+            },
+            "refine": {
+              "taskId": "01a0e16a-7065-7042-9a20-591c420cdc29",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:38.328Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "food_10",
+          "title": {
+            "ru": "Груша",
+            "en": "Pear"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a pear with a short stem",
+            "colors": "yellow-green pear, brown stem",
+            "maxSize": 6,
+            "edits": {
+              "add": [
+                {
+                  "min": [1, 5, 2],
+                  "max": [1, 5, 2],
+                  "color": "#8b5a2b"
+                },
+                {
+                  "min": [2, 5, 2],
+                  "max": [2, 5, 2],
+                  "color": "#4f9a3e"
+                }
+              ]
+            }
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e168-4ca3-73f7-a084-94c4b00011b0",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:30.887Z"
+            },
+            "refine": {
+              "taskId": "01a0e16a-7977-7281-800b-03e5b3db4bd2",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:38.684Z"
+            },
+            "regenerations": 0
+          }
+        }
+      ],
+      "maxSize": 6
+    },
+    {
+      "id": "home",
+      "title": {
+        "ru": "Дом",
+        "en": "Home"
+      },
+      "unlockAfter": 7,
+      "targetHidden": 0.25,
+      "hideFirst": [3],
+      "levels": [
+        {
+          "id": "home_01",
+          "title": {
+            "ru": "Кружка",
+            "en": "Mug"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a coffee mug with a big round handle",
+            "colors": "blue mug, white inside",
+            "maxSize": 6,
+            "threshold": 0.25,
+            "palette": ["#4f86c6", "#f7f3ea"],
+            "shell": true,
+            "edits": {
+              "add": [
+                {
+                  "min": [0, 1, 0],
+                  "max": [3, 4, 0],
+                  "color": "#4f86c6"
+                },
+                {
+                  "min": [0, 1, 3],
+                  "max": [3, 4, 3],
+                  "color": "#4f86c6"
+                },
+                {
+                  "min": [0, 1, 0],
+                  "max": [0, 4, 3],
+                  "color": "#4f86c6"
+                },
+                {
+                  "min": [3, 1, 0],
+                  "max": [3, 4, 3],
+                  "color": "#4f86c6"
+                }
+              ],
+              "paint": [
+                {
+                  "min": [0, 0, 0],
+                  "max": [5, 4, 3],
+                  "color": "#4f86c6"
+                },
+                {
+                  "min": [0, 2, 0],
+                  "max": [3, 2, 3],
+                  "color": "#f7f3ea"
+                }
+              ]
+            }
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e168-e636-700a-aca8-3bf40e903d69",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:31.244Z"
+            },
+            "refine": {
+              "taskId": "01a0e16b-6a2b-707e-9f05-5db02de418cc",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:39.050Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "home_02",
+          "title": {
+            "ru": "Чайник",
+            "en": "Teapot"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a round teapot with a spout, a handle and a lid knob",
+            "colors": "light blue teapot, white lid",
+            "maxSize": 6,
+            "palette": ["#8fc3e8", "#f7f3ea"],
+            "edits": {
+              "add": [
+                {
+                  "min": [-1, 1, 1],
+                  "max": [-1, 2, 2],
+                  "color": "#8fc3e8"
+                },
+                {
+                  "min": [4, 0, 1],
+                  "max": [4, 0, 2],
+                  "color": "#8fc3e8"
+                },
+                {
+                  "min": [4, 2, 1],
+                  "max": [4, 2, 2],
+                  "color": "#8fc3e8"
+                },
+                {
+                  "min": [1, 3, 1],
+                  "max": [1, 3, 1],
+                  "color": "#f7f3ea"
+                }
+              ],
+              "paint": [
+                {
+                  "min": [0, 0, 0],
+                  "max": [3, 1, 3],
+                  "color": "#8fc3e8"
+                },
+                {
+                  "min": [0, 2, 0],
+                  "max": [3, 2, 3],
+                  "color": "#f7f3ea"
+                }
+              ]
+            }
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e168-f0a8-7683-83d7-a3bdc5718b4d",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:31.602Z"
+            },
+            "refine": {
+              "taskId": "01a0e16b-7166-764d-b6a6-7633d1721746",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:39.409Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "home_03",
+          "title": {
+            "ru": "Лампа",
+            "en": "Lamp"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a table lamp with a cone lampshade on a round base",
+            "colors": "yellow shade, grey base",
+            "maxSize": 6,
+            "threshold": 0.25,
+            "shell": true
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e168-f76d-7277-89f6-7146841207ef",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:31.952Z"
+            },
+            "refine": {
+              "taskId": "01a0e16b-790a-7065-ab9b-c89ee381cc54",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:39.760Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "home_04",
+          "title": {
+            "ru": "Кресло",
+            "en": "Armchair"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a cozy armchair with thick armrests",
+            "colors": "red fabric, brown legs",
+            "maxSize": 6,
+            "palette": ["#b98252", "#c8373b"]
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e168-ff97-7491-a39e-e9c9edb3fafd",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:32.304Z"
+            },
+            "refine": {
+              "taskId": "01a0e16b-8221-76cb-85ec-5330540c611a",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:40.124Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "home_05",
+          "title": {
+            "ru": "Будильник",
+            "en": "Alarm clock"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a round twin-bell alarm clock on two little legs",
+            "colors": "red body, white clock face, silver bells",
+            "maxSize": 6,
+            "palette": ["#c8373b", "#f7f3ea", "#262424", "#c9c4bb"],
+            "edits": {
+              "remove": [
+                {
+                  "min": [2, 4, 0],
+                  "max": [2, 4, 0]
+                }
+              ],
+              "add": [
+                {
+                  "min": [0, 0, 0],
+                  "max": [3, 0, 1],
+                  "color": "#c8373b"
+                },
+                {
+                  "min": [0, 4, 0],
+                  "max": [0, 4, 1],
+                  "color": "#c9c4bb"
+                },
+                {
+                  "min": [3, 4, 0],
+                  "max": [3, 4, 1],
+                  "color": "#c9c4bb"
+                },
+                {
+                  "min": [0, -1, 0],
+                  "max": [0, -1, 1],
+                  "color": "#c9c4bb"
+                },
+                {
+                  "min": [3, -1, 0],
+                  "max": [3, -1, 1],
+                  "color": "#c9c4bb"
+                }
+              ],
+              "paint": [
+                {
+                  "min": [0, 0, 0],
+                  "max": [3, 3, 1],
+                  "color": "#c8373b"
+                },
+                {
+                  "min": [1, 1, 1],
+                  "max": [2, 2, 1],
+                  "color": "#f7f3ea"
+                },
+                {
+                  "min": [1, 2, 1],
+                  "max": [1, 2, 1],
+                  "color": "#262424"
+                }
+              ]
+            }
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e169-06e1-72d8-8064-9878ac98e66d",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:32.657Z"
+            },
+            "refine": {
+              "taskId": "01a0e16b-896a-7024-99d4-458887b74493",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:40.484Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "home_06",
+          "title": {
+            "ru": "Зонтик",
+            "en": "Umbrella"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "an open umbrella with a curved handle",
+            "colors": "red and white canopy, brown handle",
+            "maxSize": 6,
+            "threshold": 0.25,
+            "shell": true,
+            "palette": ["#c8373b", "#c9c4bb", "#8b5a2b"],
+            "edits": {
+              "add": [
+                {
+                  "min": [1, 1, 2],
+                  "max": [4, 1, 3],
+                  "color": "#c8373b"
+                },
+                {
+                  "min": [2, 1, 1],
+                  "max": [3, 1, 4],
+                  "color": "#c8373b"
+                },
+                {
+                  "min": [1, 0, 0],
+                  "max": [4, 0, 0],
+                  "color": "#c8373b"
+                },
+                {
+                  "min": [1, 0, 5],
+                  "max": [4, 0, 5],
+                  "color": "#c8373b"
+                },
+                {
+                  "min": [0, 0, 1],
+                  "max": [0, 0, 4],
+                  "color": "#c8373b"
+                },
+                {
+                  "min": [5, 0, 1],
+                  "max": [5, 0, 4],
+                  "color": "#c8373b"
+                },
+                {
+                  "min": [2, -3, 2],
+                  "max": [2, 0, 2],
+                  "color": "#c9c4bb"
+                },
+                {
+                  "min": [2, -4, 2],
+                  "max": [4, -4, 2],
+                  "color": "#8b5a2b"
+                },
+                {
+                  "min": [4, -3, 2],
+                  "max": [4, -3, 2],
+                  "color": "#8b5a2b"
+                }
+              ],
+              "paint": [
+                {
+                  "min": [0, 0, 0],
+                  "max": [5, 1, 5],
+                  "color": "#c8373b"
+                },
+                {
+                  "min": [2, 0, 2],
+                  "max": [2, 0, 2],
+                  "color": "#c9c4bb"
+                }
+              ]
+            }
+          },
+          "anim": "wobble",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e169-0ee8-77fd-b98e-f72ec90d3208",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:33.003Z"
+            },
+            "refine": {
+              "taskId": "01a0e16b-9072-7191-878d-c1eac17c3c84",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:40.844Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "home_07",
+          "title": {
+            "ru": "Лейка",
+            "en": "Watering can"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a watering can with a long spout",
+            "colors": "green can",
+            "maxSize": 6,
+            "threshold": 0.25,
+            "shell": true,
+            "palette": ["#7fbf4d", "#c9c4bb"],
+            "edits": {
+              "add": [
+                {
+                  "min": [0, 1, 1],
+                  "max": [0, 1, 1],
+                  "color": "#c9c4bb"
+                },
+                {
+                  "min": [-1, 2, 1],
+                  "max": [-1, 3, 1],
+                  "color": "#c9c4bb"
+                }
+              ],
+              "paint": [
+                {
+                  "min": [0, 0, 0],
+                  "max": [4, 2, 2],
+                  "color": "#7fbf4d"
+                },
+                {
+                  "min": [0, 3, 0],
+                  "max": [4, 3, 2],
+                  "color": "#c9c4bb"
+                },
+                {
+                  "min": [4, 0, 0],
+                  "max": [4, 2, 2],
+                  "color": "#c9c4bb"
+                },
+                {
+                  "min": [0, 1, 1],
+                  "max": [0, 1, 1],
+                  "color": "#c9c4bb"
+                }
+              ]
+            }
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e169-184a-74a5-9189-9087d4e31f03",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:52:33.351Z"
+            },
+            "refine": {
+              "taskId": "01a0e16b-9946-7417-b5db-ddab92402f91",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T05:54:41.200Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "home_08",
+          "title": {
+            "ru": "Лампочка",
+            "en": "Light bulb"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a classic light bulb standing upright",
+            "colors": "pale yellow glass, grey screw base",
+            "maxSize": 6
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "home_09",
+          "title": {
+            "ru": "Домик",
+            "en": "House"
+          },
+          "source": {
+            "kind": "vox"
+          },
+          "anim": "spin"
+        },
+        {
+          "id": "home_10",
+          "title": {
+            "ru": "Сапог",
+            "en": "Boot"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a single rubber rain boot",
+            "colors": "yellow boot, dark sole",
+            "maxSize": 6
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        }
+      ],
+      "maxSize": 6
+    },
+    {
+      "id": "nat",
+      "title": {
+        "ru": "Природа",
+        "en": "Nature"
+      },
+      "unlockAfter": 7,
+      "targetHidden": 0.3,
+      "hideFirst": [],
+      "levels": [
+        {
+          "id": "nat_01",
+          "title": {
+            "ru": "Ёлка",
+            "en": "Fir tree"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a cone-shaped fir tree with a short trunk",
+            "colors": "dark green tree, brown trunk",
+            "maxSize": 6
+          },
+          "anim": "wobble",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "nat_02",
+          "title": {
+            "ru": "Дерево",
+            "en": "Tree"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a round leafy tree with a thick trunk",
+            "colors": "light green crown, brown trunk",
+            "maxSize": 6
+          },
+          "anim": "wobble",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "nat_03",
+          "title": {
+            "ru": "Кактус",
+            "en": "Cactus"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a saguaro cactus with two arms in a clay pot",
+            "colors": "green cactus, terracotta pot",
+            "maxSize": 6
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "nat_04",
+          "title": {
+            "ru": "Тюльпан",
+            "en": "Tulip"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a tulip flower in a small pot",
+            "colors": "red petals, green stem and leaves, terracotta pot",
+            "maxSize": 6
+          },
+          "anim": "wobble",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "nat_05",
+          "title": {
+            "ru": "Подсолнух",
+            "en": "Sunflower"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a sunflower with a big round flower head facing forward",
+            "colors": "yellow petals, brown center, green stem",
+            "maxSize": 6
+          },
+          "anim": "wobble",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "nat_06",
+          "title": {
+            "ru": "Снеговик",
+            "en": "Snowman"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a snowman of three snowballs with a carrot nose and a bucket hat",
+            "colors": "white snow, orange nose, black hat",
+            "maxSize": 7
+          },
+          "anim": "wobble",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "nat_07",
+          "title": {
+            "ru": "Радуга",
+            "en": "Rainbow"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a thick rainbow arch standing on two small clouds",
+            "colors": "red, orange, yellow, green, blue bands, white clouds",
+            "maxSize": 7
+          },
+          "anim": "bob",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "nat_08",
+          "title": {
+            "ru": "Вулкан",
+            "en": "Volcano"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a cone volcano with lava at the top",
+            "colors": "brown rock, orange lava",
+            "maxSize": 7
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "nat_09",
+          "title": {
+            "ru": "Жёлудь",
+            "en": "Acorn"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "an acorn with a textured cap and a tiny stem",
+            "colors": "light brown nut, dark brown cap",
+            "maxSize": 7
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "nat_10",
+          "title": {
+            "ru": "Гора",
+            "en": "Mountain"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a mountain with a snowy peak",
+            "colors": "grey rock, white snow cap, green base",
+            "maxSize": 7
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        }
+      ],
+      "maxSize": 7
+    },
+    {
+      "id": "pet",
+      "title": {
+        "ru": "Ферма и питомцы",
+        "en": "Farm & Pets"
+      },
+      "unlockAfter": 7,
+      "targetHidden": 0.33,
+      "hideFirst": [],
+      "levels": [
+        {
+          "id": "pet_01",
+          "title": {
+            "ru": "Кот",
+            "en": "Cat"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a sitting cat with pointy ears and a tail curled around its paws",
+            "colors": "orange fur, white muzzle and belly",
+            "maxSize": 7,
+            "palette": ["#d9772f", "#f7f3ea", "#262424"],
+            "edits": {
+              "add": [
+                {
+                  "min": [0, 3, 3],
+                  "max": [3, 5, 4],
+                  "color": "#d9772f"
+                },
+                {
+                  "min": [0, 6, 3],
+                  "max": [0, 6, 3],
+                  "color": "#d9772f"
+                },
+                {
+                  "min": [3, 6, 3],
+                  "max": [3, 6, 3],
+                  "color": "#d9772f"
+                },
+                {
+                  "min": [1, 3, 4],
+                  "max": [2, 3, 4],
+                  "color": "#f7f3ea"
+                },
+                {
+                  "min": [0, 4, 4],
+                  "max": [0, 4, 4],
+                  "color": "#262424"
+                },
+                {
+                  "min": [3, 4, 4],
+                  "max": [3, 4, 4],
+                  "color": "#262424"
+                },
+                {
+                  "min": [1, 2, 4],
+                  "max": [2, 2, 4],
+                  "color": "#f7f3ea"
+                }
+              ]
+            }
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e11e-94f5-7603-aab0-780a105bc8b6",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T04:29:23.724Z"
+            },
+            "refine": {
+              "taskId": "01a0e11f-b9b2-7642-9102-55c4c6029f96",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T04:30:30.515Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "pet_02",
+          "title": {
+            "ru": "Щенок",
+            "en": "Puppy"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a sitting puppy with floppy ears",
+            "colors": "beige fur, brown ears, black nose",
+            "maxSize": 7
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "pet_03",
+          "title": {
+            "ru": "Кролик",
+            "en": "Bunny"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a sitting bunny with tall upright ears",
+            "colors": "white fur, pink inner ears",
+            "maxSize": 7
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "pet_04",
+          "title": {
+            "ru": "Свинка",
+            "en": "Piggy"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a round pig standing on four short legs, side view",
+            "colors": "pink pig, darker pink snout",
+            "maxSize": 7
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "pet_05",
+          "title": {
+            "ru": "Утка",
+            "en": "Duck"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a standing duck, side profile",
+            "colors": "white body, orange beak and feet",
+            "maxSize": 7
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "pet_06",
+          "title": {
+            "ru": "Цыплёнок",
+            "en": "Chick"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a round fluffy chick",
+            "colors": "yellow chick, orange beak",
+            "maxSize": 7
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "pet_07",
+          "title": {
+            "ru": "Овечка",
+            "en": "Sheep"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a fluffy sheep on four short legs",
+            "colors": "white wool, dark grey face and legs",
+            "maxSize": 7
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "pet_08",
+          "title": {
+            "ru": "Корова",
+            "en": "Cow"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a cow standing on four legs with small horns",
+            "colors": "white with black patches, pink muzzle",
+            "maxSize": 7
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "pet_09",
+          "title": {
+            "ru": "Улитка",
+            "en": "Snail"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a snail with a big spiral shell",
+            "colors": "brown shell, light green body",
+            "maxSize": 7
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "pet_10",
+          "title": {
+            "ru": "Черепаха",
+            "en": "Turtle"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a walking turtle with a domed shell",
+            "colors": "green shell, light green skin",
+            "maxSize": 7
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        }
+      ],
+      "maxSize": 7
+    },
+    {
+      "id": "sea",
+      "title": {
+        "ru": "Море",
+        "en": "Sea"
+      },
+      "unlockAfter": 7,
+      "targetHidden": 0.36,
+      "hideFirst": [],
+      "levels": [
+        {
+          "id": "sea_01",
+          "title": {
+            "ru": "Кит",
+            "en": "Whale"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a chubby whale with a water spout",
+            "colors": "blue whale, light belly, white spout",
+            "maxSize": 7
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sea_02",
+          "title": {
+            "ru": "Рыбка",
+            "en": "Fish"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a round tropical fish with big fins",
+            "colors": "orange fish, white stripes",
+            "maxSize": 7
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sea_03",
+          "title": {
+            "ru": "Осьминог",
+            "en": "Octopus"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "an octopus with a round head and curled tentacles",
+            "colors": "purple octopus",
+            "maxSize": 7
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sea_04",
+          "title": {
+            "ru": "Краб",
+            "en": "Crab"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a crab with two big claws raised",
+            "colors": "red crab",
+            "maxSize": 7
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sea_05",
+          "title": {
+            "ru": "Морская звезда",
+            "en": "Starfish"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a thick five-armed starfish",
+            "colors": "orange starfish",
+            "maxSize": 7
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sea_06",
+          "title": {
+            "ru": "Медуза",
+            "en": "Jellyfish"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a jellyfish with a dome and wavy tentacles",
+            "colors": "pink jellyfish",
+            "maxSize": 8
+          },
+          "anim": "bob",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sea_07",
+          "title": {
+            "ru": "Морской конёк",
+            "en": "Seahorse"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a seahorse with a curled tail, side profile",
+            "colors": "yellow seahorse",
+            "maxSize": 8
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sea_08",
+          "title": {
+            "ru": "Акула",
+            "en": "Shark"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a friendly shark, side profile",
+            "colors": "grey shark, white belly",
+            "maxSize": 8
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sea_09",
+          "title": {
+            "ru": "Пингвин",
+            "en": "Penguin"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a standing penguin",
+            "colors": "black back, white belly, orange beak and feet",
+            "maxSize": 8
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sea_10",
+          "title": {
+            "ru": "Дельфин",
+            "en": "Dolphin"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a jumping dolphin, side profile",
+            "colors": "light blue-grey dolphin",
+            "maxSize": 8
+          },
+          "anim": "hop",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        }
+      ],
+      "maxSize": 8
+    },
+    {
+      "id": "tr",
+      "title": {
+        "ru": "Транспорт",
+        "en": "Transport"
+      },
+      "unlockAfter": 7,
+      "targetHidden": 0.39,
+      "hideFirst": [],
+      "levels": [
+        {
+          "id": "tr_01",
+          "title": {
+            "ru": "Машинка",
+            "en": "Car"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a small cartoon car",
+            "colors": "red body, blue windows, black wheels",
+            "maxSize": 8
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "tr_02",
+          "title": {
+            "ru": "Автобус",
+            "en": "Bus"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a city bus",
+            "colors": "yellow bus, blue windows, black wheels",
+            "maxSize": 8
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "tr_03",
+          "title": {
+            "ru": "Пожарная машина",
+            "en": "Fire truck"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a fire truck with a ladder on top",
+            "colors": "red truck, silver ladder, black wheels",
+            "maxSize": 8
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "tr_04",
+          "title": {
+            "ru": "Паровоз",
+            "en": "Steam engine"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a steam locomotive with a big chimney",
+            "colors": "black and red locomotive, gold trim",
+            "maxSize": 8
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "tr_05",
+          "title": {
+            "ru": "Самолёт",
+            "en": "Airplane"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a propeller airplane",
+            "colors": "white plane, blue stripe, red propeller",
+            "maxSize": 8,
+            "threshold": 0.3,
+            "edits": {
+              "add": [
+                {
+                  "min": [2, 0, -1],
+                  "max": [4, 0, 0],
+                  "color": "#f7f3ea"
+                },
+                {
+                  "min": [2, 0, 4],
+                  "max": [4, 0, 5],
+                  "color": "#f7f3ea"
+                },
+                {
+                  "min": [1, 0, 1],
+                  "max": [6, 0, 1],
+                  "color": "#2f5f9e"
+                },
+                {
+                  "min": [1, 0, 3],
+                  "max": [6, 0, 3],
+                  "color": "#2f5f9e"
+                },
+                {
+                  "min": [2, 1, 1],
+                  "max": [3, 1, 1],
+                  "color": "#262424"
+                },
+                {
+                  "min": [2, 1, 3],
+                  "max": [3, 1, 3],
+                  "color": "#262424"
+                },
+                {
+                  "min": [6, 2, 2],
+                  "max": [7, 2, 2],
+                  "color": "#f7f3ea"
+                },
+                {
+                  "min": [7, 1, 1],
+                  "max": [7, 1, 3],
+                  "color": "#f7f3ea"
+                },
+                {
+                  "min": [0, 0, 2],
+                  "max": [0, 2, 2],
+                  "color": "#c8373b"
+                },
+                {
+                  "min": [0, 1, 1],
+                  "max": [0, 1, 3],
+                  "color": "#c8373b"
+                }
+              ]
+            }
+          },
+          "anim": "bob",
+          "meshy": {
+            "preview": {
+              "taskId": "01a0e11e-9dbd-7068-9090-f5ce022a9b2e",
+              "status": "succeeded",
+              "credits": 20,
+              "params": {
+                "mode": "preview",
+                "ai_model": "latest",
+                "topology": "triangle",
+                "target_polycount": 8000,
+                "should_remesh": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T04:29:23.923Z"
+            },
+            "refine": {
+              "taskId": "01a0e11f-c03f-7179-8ccb-edad5c802c17",
+              "status": "succeeded",
+              "credits": 10,
+              "params": {
+                "mode": "refine",
+                "ai_model": "latest",
+                "enable_pbr": false,
+                "remove_lighting": true,
+                "target_formats": ["glb"]
+              },
+              "finishedAt": "2026-09-27T04:30:30.611Z"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "tr_06",
+          "title": {
+            "ru": "Вертолёт",
+            "en": "Helicopter"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a helicopter with a top rotor",
+            "colors": "orange helicopter, blue windows, grey rotor",
+            "maxSize": 8
+          },
+          "anim": "bob",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "tr_07",
+          "title": {
+            "ru": "Парусник",
+            "en": "Sailboat"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a sailboat with one big sail",
+            "colors": "brown hull, white sail",
+            "maxSize": 8
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "tr_08",
+          "title": {
+            "ru": "Подлодка",
+            "en": "Submarine"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a submarine with a periscope",
+            "colors": "yellow submarine, round blue windows",
+            "maxSize": 8
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "tr_09",
+          "title": {
+            "ru": "Трактор",
+            "en": "Tractor"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a farm tractor with big rear wheels",
+            "colors": "green tractor, yellow wheels",
+            "maxSize": 8
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "tr_10",
+          "title": {
+            "ru": "Воздушный шар",
+            "en": "Hot air balloon"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a hot air balloon with a basket",
+            "colors": "red and yellow balloon, brown basket",
+            "maxSize": 8
+          },
+          "anim": "bob",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        }
+      ],
+      "maxSize": 8
+    },
+    {
+      "id": "toy",
+      "title": {
+        "ru": "Игрушки и музыка",
+        "en": "Toys & Music"
+      },
+      "unlockAfter": 7,
+      "targetHidden": 0.42,
+      "hideFirst": [],
+      "levels": [
+        {
+          "id": "toy_01",
+          "title": {
+            "ru": "Гитара",
+            "en": "Guitar"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "an acoustic guitar standing upright",
+            "colors": "orange-brown body, dark neck, black sound hole",
+            "maxSize": 8
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "toy_02",
+          "title": {
+            "ru": "Барабан",
+            "en": "Drum"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a snare drum with two drumsticks on top",
+            "colors": "red drum, white top, tan sticks",
+            "maxSize": 8
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "toy_03",
+          "title": {
+            "ru": "Труба",
+            "en": "Trumpet"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a trumpet, side view",
+            "colors": "gold trumpet",
+            "maxSize": 8
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "toy_04",
+          "title": {
+            "ru": "Рояль",
+            "en": "Grand piano"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a small grand piano with an open lid",
+            "colors": "black piano, white keys",
+            "maxSize": 8
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "toy_05",
+          "title": {
+            "ru": "Геймпад",
+            "en": "Gamepad"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a generic game controller without any brand",
+            "colors": "dark grey controller, colored buttons",
+            "maxSize": 8
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "toy_06",
+          "title": {
+            "ru": "Ладья",
+            "en": "Rook"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a chess rook",
+            "colors": "white chess piece",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "toy_07",
+          "title": {
+            "ru": "Конь",
+            "en": "Knight"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a chess knight",
+            "colors": "black chess piece",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "toy_08",
+          "title": {
+            "ru": "Юла",
+            "en": "Spinning top"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a spinning top",
+            "colors": "red and yellow stripes",
+            "maxSize": 9
+          },
+          "anim": "wobble",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "toy_09",
+          "title": {
+            "ru": "Мишка",
+            "en": "Teddy bear"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a sitting teddy bear",
+            "colors": "light brown fur, darker muzzle",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "toy_10",
+          "title": {
+            "ru": "Лошадка-качалка",
+            "en": "Rocking horse"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a rocking horse",
+            "colors": "white horse, red saddle, brown rockers",
+            "maxSize": 9
+          },
+          "anim": "wobble",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        }
+      ],
+      "maxSize": 9
+    },
+    {
+      "id": "ws",
+      "title": {
+        "ru": "Мастерская",
+        "en": "Workshop"
+      },
+      "unlockAfter": 7,
+      "targetHidden": 0.45,
+      "hideFirst": [],
+      "levels": [
+        {
+          "id": "ws_01",
+          "title": {
+            "ru": "Наковальня",
+            "en": "Anvil"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "an anvil",
+            "colors": "dark grey metal",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "ws_02",
+          "title": {
+            "ru": "Магнит",
+            "en": "Magnet"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a horseshoe magnet",
+            "colors": "red magnet, silver tips",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "ws_03",
+          "title": {
+            "ru": "Ящик для инструментов",
+            "en": "Toolbox"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a toolbox with a handle",
+            "colors": "red box, silver handle",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "ws_04",
+          "title": {
+            "ru": "Молоток",
+            "en": "Hammer"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a claw hammer lying flat",
+            "colors": "grey head, brown handle",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "ws_05",
+          "title": {
+            "ru": "Гаечный ключ",
+            "en": "Wrench"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a wrench lying flat",
+            "colors": "silver metal",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "ws_06",
+          "title": {
+            "ru": "Банка краски",
+            "en": "Paint can"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a paint can with a brush sticking out",
+            "colors": "blue paint, silver can, brown brush",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "ws_07",
+          "title": {
+            "ru": "Топор в пне",
+            "en": "Axe in a stump"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "an axe stuck in a tree stump",
+            "colors": "brown stump, grey axe head, tan handle",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "ws_08",
+          "title": {
+            "ru": "Фонарь",
+            "en": "Lantern"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "an old lantern with a handle on top",
+            "colors": "black frame, yellow glowing glass",
+            "maxSize": 9
+          },
+          "anim": "wobble",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "ws_09",
+          "title": {
+            "ru": "Замок",
+            "en": "Padlock"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a padlock",
+            "colors": "gold body, silver shackle",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "ws_10",
+          "title": {
+            "ru": "Тачка",
+            "en": "Wheelbarrow"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a wheelbarrow with one wheel",
+            "colors": "green tub, black wheel, brown handles",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        }
+      ],
+      "maxSize": 9
+    },
+    {
+      "id": "fx",
+      "title": {
+        "ru": "Сказки и праздники",
+        "en": "Tales & Holidays"
+      },
+      "unlockAfter": 7,
+      "targetHidden": 0.48,
+      "hideFirst": [],
+      "levels": [
+        {
+          "id": "fx_01",
+          "title": {
+            "ru": "Башня замка",
+            "en": "Castle tower"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a castle tower with battlements and a small flag",
+            "colors": "grey stone, red flag, blue roof",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "fx_02",
+          "title": {
+            "ru": "Дракончик",
+            "en": "Baby dragon"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a chubby friendly baby dragon sitting",
+            "colors": "green dragon, yellow belly, small wings",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "fx_03",
+          "title": {
+            "ru": "Сундук",
+            "en": "Treasure chest"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "an open treasure chest full of gold coins",
+            "colors": "brown wood, gold coins, metal bands",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "fx_04",
+          "title": {
+            "ru": "Корона",
+            "en": "Crown"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a royal crown with gems",
+            "colors": "gold crown, red and blue gems",
+            "maxSize": 9
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "fx_05",
+          "title": {
+            "ru": "Зелье",
+            "en": "Potion"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a round potion bottle with a cork",
+            "colors": "purple liquid, clear glass, brown cork",
+            "maxSize": 9
+          },
+          "anim": "wobble",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "fx_06",
+          "title": {
+            "ru": "Шляпа волшебника",
+            "en": "Wizard hat"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a tall pointed wizard hat with a wide brim",
+            "colors": "dark blue hat, yellow band",
+            "maxSize": 10
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "fx_07",
+          "title": {
+            "ru": "Тыква-фонарь",
+            "en": "Jack-o'-lantern"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a carved pumpkin lantern",
+            "colors": "orange pumpkin, green stem, dark carved face",
+            "maxSize": 10
+          },
+          "anim": "wobble",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "fx_08",
+          "title": {
+            "ru": "Подарок",
+            "en": "Gift"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a gift box with a big bow on top",
+            "colors": "red box, yellow ribbon",
+            "maxSize": 10
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "fx_09",
+          "title": {
+            "ru": "Торт",
+            "en": "Birthday cake"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a two-tier birthday cake with candles",
+            "colors": "pink cake, white cream, colorful candles",
+            "maxSize": 10
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "fx_10",
+          "title": {
+            "ru": "Привидение",
+            "en": "Ghost"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a cute floating ghost",
+            "colors": "white ghost, black eyes",
+            "maxSize": 10
+          },
+          "anim": "bob",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        }
+      ],
+      "maxSize": 10
+    },
+    {
+      "id": "sp",
+      "title": {
+        "ru": "Космос и наука",
+        "en": "Space & Science"
+      },
+      "unlockAfter": 7,
+      "targetHidden": 0.5,
+      "hideFirst": [],
+      "levels": [
+        {
+          "id": "sp_01",
+          "title": {
+            "ru": "Ракета",
+            "en": "Rocket"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a classic rocket with three fins",
+            "colors": "white body, red nose and fins, blue window",
+            "maxSize": 10
+          },
+          "anim": "bob",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sp_02",
+          "title": {
+            "ru": "НЛО",
+            "en": "UFO"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a flying saucer with a glass dome",
+            "colors": "silver saucer, light blue dome, yellow lights",
+            "maxSize": 10
+          },
+          "anim": "bob",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sp_03",
+          "title": {
+            "ru": "Планета с кольцом",
+            "en": "Ringed planet"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a planet with a wide tilted ring",
+            "colors": "orange planet, beige ring",
+            "maxSize": 10
+          },
+          "anim": "bob",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sp_04",
+          "title": {
+            "ru": "Шлем космонавта",
+            "en": "Space helmet"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a space helmet with a large visor",
+            "colors": "white helmet, dark gold visor",
+            "maxSize": 10
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sp_05",
+          "title": {
+            "ru": "Спутник",
+            "en": "Satellite"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a satellite with two solar panels",
+            "colors": "silver body, blue panels",
+            "maxSize": 10
+          },
+          "anim": "bob",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sp_06",
+          "title": {
+            "ru": "Робот",
+            "en": "Robot"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a boxy friendly robot standing",
+            "colors": "light grey robot, blue eyes, red antenna",
+            "maxSize": 10
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sp_07",
+          "title": {
+            "ru": "Микроскоп",
+            "en": "Microscope"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a microscope",
+            "colors": "white and black microscope",
+            "maxSize": 10
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sp_08",
+          "title": {
+            "ru": "Телескоп",
+            "en": "Telescope"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a telescope on a tripod",
+            "colors": "blue tube, brown tripod",
+            "maxSize": 10
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sp_09",
+          "title": {
+            "ru": "Колба",
+            "en": "Flask"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a round-bottom flask with liquid",
+            "colors": "clear glass, green liquid",
+            "maxSize": 10
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        },
+        {
+          "id": "sp_10",
+          "title": {
+            "ru": "Луноход",
+            "en": "Moon rover"
+          },
+          "source": {
+            "kind": "meshy",
+            "object": "a six-wheeled moon rover",
+            "colors": "silver body, gold foil, black wheels",
+            "maxSize": 10
+          },
+          "anim": "spin",
+          "meshy": {
+            "preview": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "refine": {
+              "taskId": null,
+              "status": "pending"
+            },
+            "regenerations": 0
+          }
+        }
+      ],
+      "maxSize": 10
+    }
+  ],
+  "reserve": [
+    {
+      "object": "a strawberry",
+      "colors": "red berry, green leaves on top, yellow seeds"
+    },
+    {
+      "object": "a pair of cherries",
+      "colors": "dark red cherries, green stems"
+    },
+    {
+      "object": "a slice of layered cake",
+      "colors": "cream layers, pink filling, white frosting"
+    },
+    {
+      "object": "a lighthouse",
+      "colors": "white and red stripes, black top, yellow light"
+    },
+    {
+      "object": "an anchor",
+      "colors": "dark grey metal"
+    },
+    {
+      "object": "a scallop seashell",
+      "colors": "peach and pink shell"
+    },
+    {
+      "object": "a windmill",
+      "colors": "white tower, brown roof, grey blades"
+    },
+    {
+      "object": "a unicorn standing",
+      "colors": "white body, lilac mane, gold horn"
+    },
+    {
+      "object": "a magic oil lamp",
+      "colors": "gold lamp"
+    },
+    {
+      "object": "a bell",
+      "colors": "gold bell, dark clapper"
+    },
+    {
+      "object": "a trophy cup",
+      "colors": "gold cup, dark brown base"
+    },
+    {
+      "object": "a cute owl",
+      "colors": "brown feathers, cream belly, orange beak"
+    },
+    {
+      "object": "a rubber duck",
+      "colors": "yellow duck, orange beak"
+    },
+    {
+      "object": "a toy train wagon",
+      "colors": "blue wagon, red roof, black wheels"
+    },
+    {
+      "object": "a mailbox",
+      "colors": "blue mailbox, red flag, grey post"
+    }
+  ]
+}
