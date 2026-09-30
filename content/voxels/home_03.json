@@ -1,0 +1,21 @@
+{
+ "id": "home_03",
+ "size": [
+  3,
+  6,
+  3
+ ],
+ "palette": [
+  "#f6d155",
+  "#8d8a85"
+ ],
+ "cells": "AQABAgEAAgIEAAYBAQABAQEABgIBAAECAQABAQECAgEBAAIBAQABAQEAAQIBAAICBAAIAQEA",
+ "stats": {
+  "filled": 35,
+  "fillRatio": 0.648,
+  "colors": 2,
+  "triangles": 8216,
+  "removedIsolated": 0,
+  "filledHoles": 1
+ }
+}

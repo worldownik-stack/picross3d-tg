@@ -1,0 +1,23 @@
+{
+ "id": "home_05",
+ "size": [
+  4,
+  6,
+  2
+ ],
+ "palette": [
+  "#c8373b",
+  "#c9c4bb",
+  "#f7f3ea",
+  "#262424"
+ ],
+ "cells": "AQICAAECEAEBAgIAAgICAAECBQECAwIBAQQBAwUBAQICAAEC",
+ "stats": {
+  "filled": 40,
+  "fillRatio": 0.833,
+  "colors": 4,
+  "triangles": 8249,
+  "removedIsolated": 0,
+  "filledHoles": 0
+ }
+}

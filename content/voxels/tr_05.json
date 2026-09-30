@@ -1,0 +1,23 @@
+{
+ "id": "tr_05",
+ "size": [
+  8,
+  3,
+  7
+ ],
+ "palette": [
+  "#f7f3ea",
+  "#2f5f9e",
+  "#c8373b",
+  "#262424"
+ ],
+ "cells": "AgADARUAAwEUAAYCAQABAwEBAgQBAQIAAQEIAAEDBwEBAwEBAQQFAQEDAgABAQIAAgEBAAYCAQABAwEBAgQBAQIAAQEKAAMBFQADARMA",
+ "stats": {
+  "filled": 56,
+  "fillRatio": 0.333,
+  "colors": 4,
+  "triangles": 8164,
+  "removedIsolated": 0,
+  "filledHoles": 0
+ }
+}

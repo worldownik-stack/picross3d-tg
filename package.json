@@ -1,0 +1,59 @@
+{
+  "name": "cube-sculptor-tg",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Кубоскульптор — объёмный японский кроссворд для Telegram Mini Apps",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run typecheck && vite build",
+    "build:debug": "vite build --mode debug --outDir dist-debug",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.node.json --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "e2e": "playwright test",
+    "screens": "playwright test --project=screens-phone-portrait --project=screens-phone-landscape --project=screens-desktop",
+    "video": "playwright test --project=video-desktop --project=video-phone",
+    "levels": "tsx tools/build-levels.ts",
+    "voxelize": "tsx tools/voxelize.ts",
+    "vox": "tsx tools/vox.ts",
+    "thumbs": "tsx tools/render-thumbs.ts",
+    "meshy:preview": "tsx tools/meshy-preview.ts",
+    "pack": "npm run build && tsx tools/pack.ts",
+    "bot": "tsx tools/telegram-bot.ts",
+    "release:preview": "npm run pack && tsx tools/standalone.ts"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@gltf-transform/core": "^4.5.0",
+    "@gltf-transform/extensions": "^4.5.0",
+    "@gltf-transform/functions": "^4.5.0",
+    "@playwright/test": "1.56.1",
+    "@types/node": "^22.20.4",
+    "@types/pngjs": "^6.0.5",
+    "@types/three": "^0.186.0",
+    "@vitest/coverage-v8": "^5.0.2",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
+    "fflate": "^0.8.3",
+    "globals": "^17.12.0",
+    "jpeg-js": "^0.4.4",
+    "pngjs": "^7.0.0",
+    "prettier": "^3.9.9",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.1",
+    "vite": "^8.3.1",
+    "vitest": "^5.0.2"
+  }
+}

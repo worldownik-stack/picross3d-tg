@@ -1,0 +1,22 @@
+{
+ "id": "food_10",
+ "size": [
+  4,
+  6,
+  4
+ ],
+ "palette": [
+  "#f6d155",
+  "#4f9a3e",
+  "#8b5a2b"
+ ],
+ "cells": "AQACAQEABAEBAAIBDQAMAQEAAgECAAIBBQAMAQEAAgECAAIBAgABAwECAgACAQEABAEBAAIBDQA=",
+ "stats": {
+  "filled": 50,
+  "fillRatio": 0.521,
+  "colors": 3,
+  "triangles": 8352,
+  "removedIsolated": 0,
+  "filledHoles": 0
+ }
+}

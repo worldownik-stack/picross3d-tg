@@ -1,0 +1,22 @@
+{
+ "id": "pet_01",
+ "size": [
+  4,
+  7,
+  5
+ ],
+ "palette": [
+  "#d9772f",
+  "#f7f3ea",
+  "#262424"
+ ],
+ "cells": "AQABARsAAgEZAAEBAgIBAQEAAgECAAIBEQAIAQEAAgEBAA0BAgABAQkAAgIBAAEBAgIBAQEDAgEBAwQBBAA=",
+ "stats": {
+  "filled": 49,
+  "fillRatio": 0.35,
+  "colors": 3,
+  "triangles": 8268,
+  "removedIsolated": 0,
+  "filledHoles": 0
+ }
+}

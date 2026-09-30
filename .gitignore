@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist-debug/
+coverage/
+playwright-report/
+test-results/
+artifacts/
+build.zip
+*.log
+.DS_Store
+.vite/
+dist-standalone/

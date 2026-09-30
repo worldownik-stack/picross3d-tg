@@ -1,0 +1,21 @@
+{
+ "id": "home_09",
+ "size": [
+  6,
+  6,
+  4
+ ],
+ "palette": [
+  "#f7f3ea",
+  "#c8373b",
+  "#4f86c6",
+  "#8b5a2b",
+  "#9e2a2b"
+ ],
+ "cells": "CAECAwgBAQIEAQECAQABAgIBAQIDAAICAgAGAQEDBAEBAwYBBgIBAAQCAwACAgEFAQAGAQEDBAEBAwYBBgIBAAQCAwACAgIAAQEBBAUBAQQBAQIDBwEBAgQBAQIBAAECAgEBAgMAAgICAA==",
+ "stats": {
+  "filled": 121,
+  "fillRatio": 0.84,
+  "colors": 5
+ }
+}

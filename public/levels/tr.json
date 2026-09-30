@@ -1,0 +1,3 @@
+{"version":1,"pack":"tr","levels":[
+{"id":"tr_05","pack":"tr","title":{"ru":"Самолёт","en":"Airplane"},"size":[8,3,7],"ruleset":"classic","cells":"AgADARUAAwEUAAYCAQABAwEBAgQBAQIAAQEIAAEDBwEBAwEBAQQFAQEDAgABAQIAAgEBAAYCAQABAwEBAgQBAQIAAQEKAAMBFQADARMA","palette":["#f7f3ea","#2f5f9e","#c8373b","#262424"],"hidden":{"x":"Ei8N","y":"9pxgCCLUBw==","z":"8ACH"},"difficulty":3,"targetTime":150,"anim":"bob"}
+]}

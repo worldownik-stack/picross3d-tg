@@ -1,0 +1,3 @@
+{"version":1,"pack":"pet","levels":[
+{"id":"pet_01","pack":"pet","title":{"ru":"Кот","en":"Cat"},"size":[4,7,5],"ruleset":"classic","cells":"AQABARsAAgEZAAEBAgIBAQEAAgECAAIBEQAIAQEAAgEBAA0BAgABAQkAAgIBAAEBAgIBAQEDAgEBAwQBBAA=","palette":["#d9772f","#f7f3ea","#262424"],"hidden":{"x":"7MEKHwI=","y":"GkAA","z":"LAEbAA=="},"difficulty":3,"targetTime":120,"anim":"hop"}
+]}

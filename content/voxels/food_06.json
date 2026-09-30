@@ -1,0 +1,22 @@
+{
+ "id": "food_06",
+ "size": [
+  4,
+  6,
+  4
+ ],
+ "palette": [
+  "#f7f3ea",
+  "#8b5a2b",
+  "#c8373b"
+ ],
+ "cells": "BQACAgIAAgEOAAICAQAEAgQBAQACAQIAAgEGAAICAQAEAgQBAQACAQIAAgECAAEDBwACAgIAAgENAA==",
+ "stats": {
+  "filled": 37,
+  "fillRatio": 0.385,
+  "colors": 3,
+  "triangles": 7965,
+  "removedIsolated": 0,
+  "filledHoles": 0
+ }
+}

@@ -1,0 +1,510 @@
+{
+ "version": 1,
+ "packs": [
+  {
+   "id": "tut",
+   "title": {
+    "ru": "Обучение",
+    "en": "Tutorial"
+   },
+   "unlockAfter": 0,
+   "levels": [
+    {
+     "id": "tut_01",
+     "title": {
+      "ru": "Ступенька",
+      "en": "Step"
+     },
+     "size": [
+      3,
+      3,
+      2
+     ],
+     "difficulty": 1
+    },
+    {
+     "id": "tut_02",
+     "title": {
+      "ru": "Буква «Т»",
+      "en": "Letter T"
+     },
+     "size": [
+      5,
+      5,
+      1
+     ],
+     "difficulty": 1
+    },
+    {
+     "id": "tut_03",
+     "title": {
+      "ru": "Стул",
+      "en": "Chair"
+     },
+     "size": [
+      3,
+      5,
+      3
+     ],
+     "difficulty": 1
+    },
+    {
+     "id": "tut_04",
+     "title": {
+      "ru": "Стол",
+      "en": "Table"
+     },
+     "size": [
+      5,
+      3,
+      4
+     ],
+     "difficulty": 1
+    },
+    {
+     "id": "tut_05",
+     "title": {
+      "ru": "Домик",
+      "en": "Little house"
+     },
+     "size": [
+      5,
+      5,
+      4
+     ],
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "id": "test",
+   "title": {
+    "ru": "Тест 10×10×10",
+    "en": "Test 10×10×10"
+   },
+   "unlockAfter": 0,
+   "debugOnly": true,
+   "levels": [
+    {
+     "id": "test_01",
+     "title": {
+      "ru": "Шар",
+      "en": "Ball"
+     },
+     "size": [
+      10,
+      10,
+      10
+     ],
+     "difficulty": 4
+    },
+    {
+     "id": "test_02",
+     "title": {
+      "ru": "Пирамида",
+      "en": "Pyramid"
+     },
+     "size": [
+      10,
+      10,
+      10
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "test_03",
+     "title": {
+      "ru": "Кружка",
+      "en": "Mug"
+     },
+     "size": [
+      10,
+      10,
+      10
+     ],
+     "difficulty": 4
+    },
+    {
+     "id": "test_04",
+     "title": {
+      "ru": "Бублик",
+      "en": "Donut"
+     },
+     "size": [
+      10,
+      10,
+      10
+     ],
+     "difficulty": 4
+    },
+    {
+     "id": "test_05",
+     "title": {
+      "ru": "Гриб",
+      "en": "Mushroom"
+     },
+     "size": [
+      10,
+      10,
+      10
+     ],
+     "difficulty": 4
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "title": {
+    "ru": "Еда",
+    "en": "Food"
+   },
+   "unlockAfter": 0,
+   "levels": [
+    {
+     "id": "food_01",
+     "title": {
+      "ru": "Яблоко",
+      "en": "Apple"
+     },
+     "size": [
+      4,
+      4,
+      4
+     ],
+     "difficulty": 2
+    },
+    {
+     "id": "food_02",
+     "title": {
+      "ru": "Гриб",
+      "en": "Mushroom"
+     },
+     "size": [
+      3,
+      5,
+      3
+     ],
+     "difficulty": 2
+    },
+    {
+     "id": "food_03",
+     "title": {
+      "ru": "Морковка",
+      "en": "Carrot"
+     },
+     "size": [
+      2,
+      3,
+      6
+     ],
+     "difficulty": 2
+    },
+    {
+     "id": "food_04",
+     "title": {
+      "ru": "Арбуз",
+      "en": "Watermelon"
+     },
+     "size": [
+      4,
+      4,
+      2
+     ],
+     "difficulty": 2
+    },
+    {
+     "id": "food_05",
+     "title": {
+      "ru": "Мороженое",
+      "en": "Ice cream"
+     },
+     "size": [
+      3,
+      6,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "food_06",
+     "title": {
+      "ru": "Кекс",
+      "en": "Cupcake"
+     },
+     "size": [
+      4,
+      6,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "food_07",
+     "title": {
+      "ru": "Пончик",
+      "en": "Donut"
+     },
+     "size": [
+      6,
+      2,
+      6
+     ],
+     "difficulty": 2
+    },
+    {
+     "id": "food_08",
+     "title": {
+      "ru": "Сыр",
+      "en": "Cheese"
+     },
+     "size": [
+      6,
+      4,
+      3
+     ],
+     "difficulty": 2
+    },
+    {
+     "id": "food_09",
+     "title": {
+      "ru": "Бургер",
+      "en": "Burger"
+     },
+     "size": [
+      5,
+      6,
+      5
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "food_10",
+     "title": {
+      "ru": "Груша",
+      "en": "Pear"
+     },
+     "size": [
+      4,
+      6,
+      4
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "id": "home",
+   "title": {
+    "ru": "Дом",
+    "en": "Home"
+   },
+   "unlockAfter": 7,
+   "levels": [
+    {
+     "id": "home_01",
+     "title": {
+      "ru": "Кружка",
+      "en": "Mug"
+     },
+     "size": [
+      6,
+      5,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "home_02",
+     "title": {
+      "ru": "Чайник",
+      "en": "Teapot"
+     },
+     "size": [
+      6,
+      4,
+      4
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "home_03",
+     "title": {
+      "ru": "Лампа",
+      "en": "Lamp"
+     },
+     "size": [
+      3,
+      6,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "home_04",
+     "title": {
+      "ru": "Кресло",
+      "en": "Armchair"
+     },
+     "size": [
+      6,
+      5,
+      5
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "home_05",
+     "title": {
+      "ru": "Будильник",
+      "en": "Alarm clock"
+     },
+     "size": [
+      4,
+      6,
+      2
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "home_06",
+     "title": {
+      "ru": "Зонтик",
+      "en": "Umbrella"
+     },
+     "size": [
+      6,
+      6,
+      6
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "home_07",
+     "title": {
+      "ru": "Лейка",
+      "en": "Watering can"
+     },
+     "size": [
+      6,
+      4,
+      3
+     ],
+     "difficulty": 3
+    },
+    {
+     "id": "home_09",
+     "title": {
+      "ru": "Домик",
+      "en": "House"
+     },
+     "size": [
+      6,
+      6,
+      4
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "id": "nat",
+   "title": {
+    "ru": "Природа",
+    "en": "Nature"
+   },
+   "unlockAfter": 7,
+   "levels": []
+  },
+  {
+   "id": "pet",
+   "title": {
+    "ru": "Ферма и питомцы",
+    "en": "Farm & Pets"
+   },
+   "unlockAfter": 7,
+   "levels": [
+    {
+     "id": "pet_01",
+     "title": {
+      "ru": "Кот",
+      "en": "Cat"
+     },
+     "size": [
+      4,
+      7,
+      5
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "id": "sea",
+   "title": {
+    "ru": "Море",
+    "en": "Sea"
+   },
+   "unlockAfter": 7,
+   "levels": []
+  },
+  {
+   "id": "tr",
+   "title": {
+    "ru": "Транспорт",
+    "en": "Transport"
+   },
+   "unlockAfter": 7,
+   "levels": [
+    {
+     "id": "tr_05",
+     "title": {
+      "ru": "Самолёт",
+      "en": "Airplane"
+     },
+     "size": [
+      8,
+      3,
+      7
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "id": "toy",
+   "title": {
+    "ru": "Игрушки и музыка",
+    "en": "Toys & Music"
+   },
+   "unlockAfter": 7,
+   "levels": []
+  },
+  {
+   "id": "ws",
+   "title": {
+    "ru": "Мастерская",
+    "en": "Workshop"
+   },
+   "unlockAfter": 7,
+   "levels": []
+  },
+  {
+   "id": "fx",
+   "title": {
+    "ru": "Сказки и праздники",
+    "en": "Tales & Holidays"
+   },
+   "unlockAfter": 7,
+   "levels": []
+  },
+  {
+   "id": "sp",
+   "title": {
+    "ru": "Космос и наука",
+    "en": "Space & Science"
+   },
+   "unlockAfter": 7,
+   "levels": []
+  }
+ ]
+}
