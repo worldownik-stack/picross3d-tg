@@ -64,7 +64,8 @@ export class SettingsScreen extends Screen {
         { class: 'modal-buttons' },
         button({ variant: 'danger', label: t('common.yes'), testId: 'confirm-yes' }, () => {
           m.close();
-          // Сброс прогресса подключается вместе с сохранениями (фаза 6).
+          this.app.progress.reset();
+          void this.app.save.flush();
         }),
         button({ variant: 'secondary', label: t('common.no'), testId: 'confirm-no' }, () =>
           m.close(),
