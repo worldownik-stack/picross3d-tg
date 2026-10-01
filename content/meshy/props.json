@@ -1,0 +1,34 @@
+{
+  "prop_plinth": {
+    "purpose": "постамент под фигурой в окне просмотра коллекции (Приложение А.3)",
+    "out": "models/plinth.glb",
+    "maxTriangles": 800,
+    "color": "#f1e6d4",
+    "preview": {
+      "taskId": "01a0f333-eea9-7165-ad2b-cebf301b6213",
+      "status": "succeeded",
+      "credits": 20,
+      "params": {
+        "ai_model": "meshy-6",
+        "topology": "triangle",
+        "target_polycount": 800,
+        "should_remesh": true,
+        "target_formats": [
+          "glb"
+        ],
+        "prompt": "A small square display plinth for a museum figurine, simple stylized game prop, beveled edges"
+      }
+    },
+    "refine": {
+      "taskId": "01a0f78d-99fa-7614-a65b-8fec4dfd45a1",
+      "status": "succeeded",
+      "credits": 10,
+      "params": {
+        "ai_model": "meshy-6",
+        "enable_pbr": false,
+        "remove_lighting": true,
+        "texture_prompt": "cream marble, flat stylized colors, no baked lighting"
+      }
+    }
+  }
+}

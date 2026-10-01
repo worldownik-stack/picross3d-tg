@@ -24,6 +24,7 @@
     "levels": "tsx tools/build-levels.ts",
     "voxelize": "tsx tools/voxelize.ts",
     "vox": "tsx tools/vox.ts",
+    "props": "tsx tools/props.ts",
     "thumbs": "tsx tools/render-thumbs.ts",
     "meshy:preview": "tsx tools/meshy-preview.ts",
     "pack": "npm run build && tsx tools/pack.ts",

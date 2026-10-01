@@ -156,11 +156,11 @@ test('видео: обучение, уровень 1 → 2', async ({ page }, in
   await tap(page, await cellFace(page, 1, 1, 1), touch);
   await page.waitForTimeout(500);
 
-  // Срез сверху ручкой Y и обратно.
-  const knob = (await page.getByTestId('slice-knob-Y').boundingBox())!;
+  // Срез ручкой по оси взгляда (она одна) — тянем к блоку — и обратно.
+  const knob = (await page.locator('.slice-knob:visible').boundingBox())!;
   const kc = { x: knob.x + knob.width / 2, y: knob.y + knob.height / 2 };
-  const bottom = await cellFace(page, 0, 0, 1);
-  await drag(page, kc, { x: kc.x, y: (kc.y + bottom.y) / 2 }, touch);
+  const mid = await cellFace(page, 1, 1, 1);
+  await drag(page, kc, { x: (kc.x + mid.x) / 2, y: (kc.y + mid.y) / 2 }, touch);
   await page.waitForTimeout(700);
   await click('slice-less');
   await click('slice-less');

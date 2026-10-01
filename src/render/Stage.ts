@@ -40,6 +40,12 @@ export class Stage {
     this.group.add(this.base, this.top, this.shadow);
   }
 
+  /** Поворотный стол виден (иначе — только тень, например на постаменте коллекции). */
+  showTurntable(on: boolean): void {
+    this.top.visible = on;
+    this.base.visible = on;
+  }
+
   fit(size: Size3): void {
     const [X, , Z] = size;
     const r = 0.5 * Math.sqrt(X * X + Z * Z) + 0.55;

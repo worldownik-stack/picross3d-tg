@@ -234,7 +234,7 @@ export class CollectionScreen extends Screen {
     try {
       const level = await this.app.levels.getLevel(pack.id, info.id);
       if (this.viewer?.studio !== studio) return;
-      studio.show(level, { stage: true });
+      studio.show(level, { stage: 'plinth', zoom: 0.8 });
       studio.spin();
     } catch (e) {
       console.error(e);
