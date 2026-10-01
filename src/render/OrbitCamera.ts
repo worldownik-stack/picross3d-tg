@@ -10,9 +10,8 @@ const MIN_ZOOM = 0.45;
 const MAX_ZOOM = 2.2;
 const FOV = 38;
 
-/** Ручки срезов: вынос за конец ребра в покое и отступ от ребра (в кубах). */
+/** Ручки срезов: вынос за край блока в покое (в кубах). */
 export const KNOB_REST_OUT = 0.6;
-export const KNOB_PAD = 0.35;
 /** Радиус ручки на экране с запасом, px. */
 const KNOB_RADIUS_PX = 28;
 
@@ -36,6 +35,8 @@ export class OrbitCamera {
   readonly target = new Vector3();
   private radius = 3;
   private bounds: Size3 = [1, 1, 1];
+  /** Что ещё должно влезть в кадр под полом (постамент коллекции). */
+  private below = { depth: 0, radius: 0 };
   private width = 1;
   private height = 1;
   private insets: Insets = { top: 0, right: 0, bottom: 0, left: 0 };
@@ -51,11 +52,14 @@ export class OrbitCamera {
   private shakeAmp = 0;
   private readonly tmp = new Vector3();
 
-  setBounds(size: Size3): void {
+  setBounds(size: Size3, below = { depth: 0, radius: 0 }): void {
     const [X, Y, Z] = size;
     this.bounds = [X, Y, Z];
-    this.target.set(0, Y / 2, 0);
-    this.radius = 0.5 * Math.sqrt(X * X + Y * Y + Z * Z);
+    this.below = below;
+    this.target.set(0, (Y - below.depth) / 2, 0);
+    const H = Y + below.depth;
+    const W = below.radius * 2;
+    this.radius = 0.5 * Math.hypot(Math.max(X, W), H, Math.max(Z, W));
     this.refit();
   }
 
@@ -89,16 +93,11 @@ export class OrbitCamera {
     );
   }
 
-  /** Поля (px) вокруг блока: слева и снизу — место под ручки срезов. */
+  /** Поля (px) вокруг блока под ручки срезов: X и Z — по бокам, Y — сверху. */
   private margins(): { l: number; r: number; t: number; b: number } {
     const [X, Y, Z] = this.bounds;
-    const knob = KNOB_RADIUS_PX * 2;
-    return {
-      l: Y > 1 ? knob : 12,
-      r: 12,
-      t: Y > 1 ? KNOB_RADIUS_PX : 12,
-      b: X > 1 || Z > 1 ? knob : 12,
-    };
+    const side = X > 1 || Z > 1 ? KNOB_RADIUS_PX * 2.6 : 12;
+    return { l: side, r: side, t: Y > 1 ? KNOB_RADIUS_PX * 2.3 : 12, b: 12 };
   }
 
   /**
@@ -113,6 +112,10 @@ export class OrbitCamera {
     const pts: Array<[number, number, number]> = [];
     for (const x of [-X / 2, X / 2]) {
       for (const y of [0, Y]) for (const z of [-Z / 2, Z / 2]) pts.push([x, y, z]);
+    }
+    const { depth, radius: r } = this.below;
+    if (depth > 0) {
+      for (const x of [-r, r]) for (const z of [-r, r]) pts.push([x, -depth, z]);
     }
     const fits = (d: number, az: number, pitch: number): boolean => {
       const cp = Math.cos(pitch);

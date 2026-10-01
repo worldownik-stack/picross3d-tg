@@ -36,9 +36,12 @@ test('победа → прогресс, открытие следующего �
   await expect(page.getByTestId('collection-count')).toContainText('1');
 
   // Крупный просмотр: открывается, вращается на своём canvas, закрывается Escape.
+  const plinth = page.waitForResponse((r) => r.url().endsWith('/models/plinth.glb'));
   await slot.click();
   await expect(page.getByTestId('collection-viewer')).toBeVisible();
   await expect(page.locator('[data-testid=viewer-stage] canvas')).toBeVisible();
+  // Фигура стоит на постаменте из Meshy (грузится лениво при открытии).
+  expect((await plinth).ok()).toBe(true);
   await page.keyboard.press('Escape');
   await expect(page.getByTestId('collection-viewer')).toHaveCount(0);
   await expect(page.locator('[data-testid=viewer-stage] canvas')).toHaveCount(0);

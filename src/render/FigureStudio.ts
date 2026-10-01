@@ -2,12 +2,13 @@ import { levelPuzzle, type Level } from '../core/level';
 import { BlockView } from './BlockView';
 import { ST_HIDDEN } from './cubeMaterial';
 import { GlyphAtlas } from './glyphAtlas';
+import { Plinth } from './Plinth';
 import { DEFAULT_AZ, DEFAULT_PITCH } from './OrbitCamera';
 import { Renderer, type Animator } from './Renderer';
 
 export interface ShowOptions {
-  /** Показать поворотный стол под фигурой. */
-  stage?: boolean;
+  /** Под фигурой: поворотный стол (`true`, по умолчанию), постамент коллекции или ничего. */
+  stage?: boolean | 'plinth';
   az?: number;
   pitch?: number;
   zoom?: number;
@@ -22,6 +23,7 @@ export class FigureStudio {
   private readonly atlas: GlyphAtlas;
   private view: BlockView | null = null;
   private spinFn: Animator | null = null;
+  private plinth: Plinth | null = null;
 
   constructor(container: HTMLElement) {
     this.renderer = new Renderer(container);
@@ -38,8 +40,17 @@ export class FigureStudio {
     this.view = view;
     const r = this.renderer;
     r.setBlock(view);
-    r.stage.group.visible = opts.stage ?? true;
+    const stage = opts.stage ?? true;
+    r.stage.group.visible = stage !== false;
+    r.stage.showTurntable(stage === true);
     r.setInsets({ top: 0, right: 0, bottom: 0, left: 0 });
+    if (stage === 'plinth') {
+      this.plinth ??= new Plinth(() => r.invalidate());
+      r.scene.add(this.plinth.group);
+      r.orbit.setBounds(level.size, this.plinth.fit(level.size));
+    } else {
+      this.plinth?.group.removeFromParent();
+    }
     r.orbit.az = opts.az ?? DEFAULT_AZ;
     r.orbit.pitch = opts.pitch ?? DEFAULT_PITCH;
     r.orbit.zoom = opts.zoom ?? 1;
@@ -76,6 +87,7 @@ export class FigureStudio {
 
   dispose(): void {
     this.clear();
+    this.plinth?.dispose();
     this.atlas.dispose();
     this.renderer.dispose();
   }

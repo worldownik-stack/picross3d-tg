@@ -1051,61 +1051,60 @@ button {
   height: 100%;
   overflow: visible;
 }
-.slice-track {
-  stroke: rgba(255, 250, 240, 0.7);
-  stroke-width: 7;
+.slice-guide {
+  stroke-width: 4;
   stroke-linecap: round;
-  filter: drop-shadow(0 1px 1.5px rgba(80, 50, 25, 0.35));
+  stroke-dasharray: 1 10;
+  opacity: 0.75;
 }
-.slice-cut {
-  stroke-width: 6;
-  stroke-linecap: round;
-  stroke-dasharray: 2 9;
+.slice-guide.axis-0 {
+  stroke: #e0604a;
 }
-.slice-cut.axis-0,
-.slice-knob.axis-0 {
-  --axis: #e07a5f;
-  stroke: #e07a5f;
+.slice-guide.axis-1 {
+  stroke: #4ca862;
 }
-.slice-cut.axis-1,
-.slice-knob.axis-1 {
-  --axis: #5aa86b;
-  stroke: #5aa86b;
+.slice-guide.axis-2 {
+  stroke: #3d86d0;
 }
-.slice-cut.axis-2,
-.slice-knob.axis-2 {
-  --axis: #4f86c6;
-  stroke: #4f86c6;
+/* Ромб-пирамидка: светлый контур и тень, как у кристаллов-ручек Picross 3D. */
+.slice-gem {
+  filter: drop-shadow(0 3px 3px rgba(80, 50, 25, 0.35));
+  transition: filter 0.15s ease;
 }
+.slice-gem .gem-base {
+  fill: #fffaf2;
+  stroke: #fffaf2;
+  stroke-width: 5;
+  stroke-linejoin: round;
+}
+.slice-gem .gem-face {
+  stroke: rgba(255, 255, 255, 0.35);
+  stroke-width: 0.8;
+  stroke-linejoin: round;
+}
+.slice-gem.active {
+  filter: drop-shadow(0 0 6px rgba(255, 250, 240, 0.95))
+    drop-shadow(0 3px 4px rgba(80, 50, 25, 0.4));
+}
+/* Зона нажатия ручки (≥ 48 px), сама ручка нарисована ромбом в SVG. */
 .slice-knob {
   position: absolute;
   left: 0;
   top: 0;
-  width: max(48px, 2.9rem);
-  height: max(48px, 2.9rem);
+  width: 56px;
+  height: 56px;
   padding: 0;
   border: none;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 38%, #fffaf2 0 45%, #f1e4cc 100%);
-  box-shadow:
-    0 0 0 4px var(--axis),
-    0 4px 10px var(--shadow);
-  color: var(--axis);
-  font-weight: 950;
-  font-size: 1.05rem;
+  background: transparent;
   cursor: grab;
   pointer-events: auto;
   touch-action: none;
-  transition: box-shadow 0.15s ease;
   will-change: transform;
 }
-.slice-knob.active,
-.slice-knob.dragging {
-  background: var(--axis);
-  color: #fff;
-  box-shadow:
-    0 0 0 4px #fff,
-    0 4px 12px var(--shadow);
+.slice-knob:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 2px;
 }
 .slice-knob.dragging {
   cursor: grabbing;

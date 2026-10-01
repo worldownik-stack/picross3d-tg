@@ -147,6 +147,28 @@ test.describe('уровень', () => {
     s = await state(page);
     expect(s.slice.depth).toBe(0);
 
+    // Ручка одна — по оси взгляда (Z при ракурсе по умолчанию): тянем к блоку → срез по
+    // этой оси; «−» возвращает слои. Остальные ручки скрыты.
+    await expect(page.locator('.slice-knob:visible')).toHaveCount(1);
+    const knob = page.getByTestId('slice-knob-Z');
+    await expect(knob).toBeVisible();
+    const kb = (await knob.boundingBox())!;
+    const vp = page.viewportSize()!;
+    const from = { x: kb.x + kb.width / 2, y: kb.y + kb.height / 2 };
+    const to = { x: (from.x + vp.width / 2) / 2, y: (from.y + vp.height / 2) / 2 };
+    if (touch) await touchDrag(page, [from, to]);
+    else {
+      await page.mouse.move(from.x, from.y);
+      await page.mouse.down();
+      await page.mouse.move(to.x, to.y, { steps: 6 });
+      await page.mouse.up();
+    }
+    s = await state(page);
+    expect(s.slice.axis).toBe(2);
+    expect(s.slice.depth).toBeGreaterThan(0);
+    for (let k = s.slice.depth; k > 0; k--) await page.getByTestId('slice-less').click();
+    expect((await state(page)).slice.depth).toBe(0);
+
     // Остальное решает бот через debug-API → победа.
     await page.evaluate(() => (window as unknown as { __debug: Dbg }).__debug.solve());
     s = await state(page);
@@ -228,6 +250,43 @@ test.describe('уровень', () => {
 });
 
 test.describe('камера', () => {
+  test('ручка среза одна и идёт по оси взгляда', async ({ page }) => {
+    const errors = trackErrors(page);
+    await openApp(page);
+    await openLevel(page, 'tut', 'tut_01');
+    type Orbit = { az: number; pitch: number };
+    type Ctl = { renderer: { orbit: Orbit; invalidate(): void } };
+    const view = async (az: number, pitch: number) => {
+      await page.evaluate(
+        ([az, pitch]) => {
+          const d = (
+            window as unknown as {
+              __debug: { app: { router: { currentScreen: { currentController: Ctl } } } };
+            }
+          ).__debug;
+          const r = d.app.router.currentScreen.currentController.renderer;
+          r.orbit.az = az!;
+          r.orbit.pitch = pitch!;
+          r.invalidate();
+        },
+        [az, pitch],
+      );
+      await page.waitForTimeout(300);
+    };
+    const visible = page.locator('.slice-knob:visible');
+    // Смотрим почти вдоль Z → ручка Z; вдоль X → X; сверху → Y.
+    await view(0.2, 0.3);
+    await expect(visible).toHaveCount(1);
+    await expect(page.getByTestId('slice-knob-Z')).toBeVisible();
+    await view(Math.PI / 2 - 0.2, 0.3);
+    await expect(page.getByTestId('slice-knob-X')).toBeVisible();
+    await expect(visible).toHaveCount(1);
+    await view(0.6, 1.25);
+    await expect(page.getByTestId('slice-knob-Y')).toBeVisible();
+    await expect(visible).toHaveCount(1);
+    expect(errors).toEqual([]);
+  });
+
   test('вращение по пустому месту, зум, ховер', async ({ page }, info) => {
     const touch = !!info.project.use.hasTouch;
     const errors = trackErrors(page);
