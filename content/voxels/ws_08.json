@@ -1,0 +1,18 @@
+{
+ "id": "ws_08",
+ "size": [
+  5,
+  8,
+  5
+ ],
+ "palette": [
+  "#262424",
+  "#f6d155"
+ ],
+ "cells": "BgEBAgEBAQICAQECAQEBAgIBAQIBAQECAgEBAgEBAQIGAQoABQECAgEBBAIBAQQCAQEEAgEBAgIFAQEAAwEDAAEBAgAeAQEAAwEGAAUBAgIBAQQCAQEEAgEBBAIBAQICBQEBAAMBAwABAQIABgEBAgEBAQICAQECAQEBAgIBAQIBAQECAgEBAgEBAQIGAQoA",
+ "stats": {
+  "filled": 161,
+  "fillRatio": 0.805,
+  "colors": 2
+ }
+}

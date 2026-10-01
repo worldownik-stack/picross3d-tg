@@ -1,0 +1,20 @@
+{
+ "id": "home_08",
+ "size": [
+  4,
+  6,
+  4
+ ],
+ "palette": [
+  "#f3e39a",
+  "#c9c4bb",
+  "#8d8a85",
+  "#4a4745"
+ ],
+ "cells": "DQACAQIAAgEGAAIEAgACAgIAAgMBAAgBAQACAQIAAgQCAAICAgACAwEACAEBAAIBDgACAQIAAgEFAA==",
+ "stats": {
+  "filled": 40,
+  "fillRatio": 0.417,
+  "colors": 4
+ }
+}

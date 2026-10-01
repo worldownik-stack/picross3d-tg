@@ -1,0 +1,20 @@
+{
+ "id": "pet_05",
+ "size": [
+  6,
+  6,
+  3
+ ],
+ "palette": [
+  "#f7f3ea",
+  "#c9c4bb",
+  "#f08a3c",
+  "#262424"
+ ],
+ "cells": "BwAEAQEAAQEDAgEBAQABAQIAAgEEAAIBBAABAQEEAwABAwEAAQMCAAQBAQAFAQEAAQECAAIBBAACAQEDAwACAQgABAEBAAEBAwIBAQEAAQECAAIBBAACAQQAAQEBBAEA",
+ "stats": {
+  "filled": 51,
+  "fillRatio": 0.472,
+  "colors": 4
+ }
+}

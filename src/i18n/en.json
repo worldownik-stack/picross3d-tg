@@ -15,7 +15,7 @@
   "packs.locked": "Solve {n} puzzles in the previous set",
   "packs.progress": "{solved} of {total}",
   "levels.title": "Puzzles",
-  "levels.locked": "Locked",
+  "levels.locked": "Solve the previous level first",
   "collection.title": "Collection",
   "collection.empty": "Solved figures will appear here",
   "settings.title": "Settings",
@@ -56,5 +56,18 @@
   "fail.continueNote": "−2 mistakes, once per attempt",
   "ad.unavailable": "Ads are unavailable right now",
   "loading.text": "Loading…",
-  "error.generic": "Something went wrong. Please try again."
+  "error.generic": "Something went wrong. Please try again.",
+  "collection.unsolved": "Solve the level to see this figure",
+  "collection.bestTime": "Best time",
+  "tut.zero": "0: no figure cubes in this line. Break the cube",
+  "tut.full": "The number equals the line length: keep all its cubes",
+  "tut.finish": "Break all extra cubes to reveal the figure",
+  "tut.numbers": "A number tells how many figure cubes the line has",
+  "tut.brushTool": "The brush marks cubes that surely stay",
+  "tut.brushMark": "Mark a cube from a full line",
+  "tut.hammerBack": "Marked cubes can't be broken by mistake. Back to the hammer",
+  "tut.rotate": "Drag on empty space to rotate the block",
+  "tut.slice": "A slice hides the outer layer: press «+»",
+  "tut.circle": "A circled number: the figure cubes form two groups",
+  "tut.square": "A squared number: three or more groups"
 }

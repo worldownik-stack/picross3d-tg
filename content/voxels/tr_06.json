@@ -1,0 +1,20 @@
+{
+ "id": "tr_06",
+ "size": [
+  8,
+  6,
+  5
+ ],
+ "palette": [
+  "#f08a3c",
+  "#8fc3e8",
+  "#8d8a85",
+  "#4a4745"
+ ],
+ "cells": "LQABAwUABQQEAAQBBAACAQICBAACAQICDQABAw4ACgECAgEBAwACAQICBQABAwMABwMDAAUEBAAEAQQAAgECAgQAAgECAg0AAQMvAAEDAgA=",
+ "stats": {
+  "filled": 63,
+  "fillRatio": 0.263,
+  "colors": 4
+ }
+}

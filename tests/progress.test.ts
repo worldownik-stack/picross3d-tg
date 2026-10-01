@@ -1,179 +1,118 @@
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import type { PackInfo } from '../src/app/content';
-import { mergeProgress, parseProgress, ProgressStore } from '../src/app/progress';
-import { parseSave, SaveManager } from '../src/app/save';
-import { SettingsStore } from '../src/app/settings';
-import { MockPlatform } from '../src/platform/MockPlatform';
+import { PROGRESS_KEY, ProgressStore } from '../src/app/progress';
+import { SaveStore } from '../src/app/save';
+import { SETTINGS_KEY, SettingsStore } from '../src/app/settings';
+import type { SaveBlob } from '../src/platform';
 
-const pack = (id: string, levels: number, unlockAfter: number): PackInfo => ({
+const pack = (id: string, unlockAfter: number, n = 10, debugOnly = false): PackInfo => ({
   id,
   title: { ru: id, en: id },
   unlockAfter,
-  levels: Array.from({ length: levels }, (_, i) => ({
-    id: `${id}_${i + 1}`,
+  debugOnly,
+  levels: Array.from({ length: n }, (_, k) => ({
+    id: `${id}_${k + 1}`,
     title: { ru: '', en: '' },
-    size: [3, 3, 3],
+    size: [1, 1, 1],
     difficulty: 1,
   })),
 });
+const PACKS = [
+  pack('tut', 0, 5),
+  pack('test', 0, 5, true),
+  pack('food', 0),
+  pack('home', 7),
+  pack('nat', 7),
+];
 
-describe('ProgressStore', () => {
-  it('хранит максимум звёзд и минимум времени', () => {
-    const p = new ProgressStore();
-    expect(p.record('a', 2, 50)).toEqual({ previous: undefined, best: { stars: 2, time: 50 } });
-    const r = p.record('a', 1, 40);
-    expect(r.previous).toEqual({ stars: 2, time: 50 });
-    expect(r.best).toEqual({ stars: 2, time: 40 });
-    expect(p.record('a', 3, 90).best).toEqual({ stars: 3, time: 40 });
-    expect(p.isSolved('a')).toBe(true);
-    expect(p.isSolved('b')).toBe(false);
+describe('прогресс игрока', () => {
+  it('лучший результат: звёзды — максимум, время и промахи — минимум; сохранение сразу', () => {
+    const saves: Array<[SaveBlob, boolean]> = [];
+    const p = new ProgressStore(new SaveStore(async (b, f) => void saves.push([b, f])));
+    expect(p.record('food_1', 2, 90, 3)).toBe(true);
+    expect(p.record('food_1', 1, 60, 5)).toBe(false);
+    expect(p.get('food_1')).toEqual({ stars: 2, time: 60, mistakes: 3 });
+    expect(saves).toHaveLength(2);
+    expect(saves[1]![1]).toBe(true);
+    expect(saves[1]![0][PROGRESS_KEY]).toEqual({ v: 1, levels: { food_1: [2, 60, 3] } });
   });
 
-  it('уведомляет подписчиков и умеет сбрасываться', () => {
+  it('наборы открываются по порядку после 7 решённых, отладочные — всегда', () => {
     const p = new ProgressStore();
-    const cb = vi.fn();
-    p.subscribe(cb);
-    p.record('a', 3, 10);
+    expect(p.isPackUnlocked(PACKS, 'tut')).toBe(true);
+    expect(p.isPackUnlocked(PACKS, 'food')).toBe(true); // unlockAfter 0
+    expect(p.isPackUnlocked(PACKS, 'home')).toBe(false);
+    expect(p.isPackUnlocked(PACKS, 'test')).toBe(true);
+    for (let k = 1; k <= 6; k++) p.record(`food_${k}`, 3, 10, 0);
+    expect(p.isPackUnlocked(PACKS, 'home')).toBe(false);
+    p.record('food_7', 3, 10, 0);
+    expect(p.isPackUnlocked(PACKS, 'home')).toBe(true);
+    expect(p.isPackUnlocked(PACKS, 'nat')).toBe(false);
+    expect(p.solvedIn(PACKS[2]!)).toBe(7);
+    expect(p.starsIn(PACKS[2]!)).toBe(21);
+    expect(p.isPackUnlocked(PACKS, 'nope')).toBe(false);
+  });
+
+  it('уровни внутри набора открываются последовательно', () => {
+    const p = new ProgressStore();
+    const food = PACKS[2]!;
+    expect(p.isLevelUnlocked(PACKS, food, 0)).toBe(true);
+    expect(p.isLevelUnlocked(PACKS, food, 1)).toBe(false);
+    p.record('food_1', 1, 10, 0);
+    expect(p.isLevelUnlocked(PACKS, food, 1)).toBe(true);
+    expect(p.isLevelUnlocked(PACKS, food, 2)).toBe(false);
+    expect(p.isLevelUnlocked(PACKS, PACKS[3]!, 0)).toBe(false); // набор закрыт
+    expect(p.isLevelUnlocked(PACKS, food, 99)).toBe(false);
+  });
+
+  it('загрузка: битые записи пропускаются; сброс', () => {
+    const p = new ProgressStore();
+    p.load({ v: 1, levels: { a: [3, 40, 1], b: 'x', c: [7, 12], d: [1] } });
+    expect(p.get('a')).toEqual({ stars: 3, time: 40, mistakes: 1 });
+    expect(p.get('b')).toBeUndefined();
+    expect(p.get('c')).toEqual({ stars: 3, time: 12, mistakes: 0 });
+    expect(p.isSolved('d')).toBe(false);
+    expect(p.solvedCount).toBe(2);
+    let calls = 0;
+    const unsub = p.subscribe(() => calls++);
     p.reset();
-    expect(cb).toHaveBeenCalledTimes(2);
-    expect(p.get('a')).toBeUndefined();
-  });
-
-  it('открывает наборы по числу решённых в предыдущем', () => {
-    const packs = [pack('p1', 3, 0), pack('p2', 3, 2), pack('p3', 3, 1)];
-    const p = new ProgressStore();
-    expect(p.isPackUnlocked(packs, 0)).toBe(true);
-    expect(p.isPackUnlocked(packs, 1)).toBe(false);
-    p.record('p1_1', 3, 10);
-    expect(p.isPackUnlocked(packs, 1)).toBe(false);
-    p.record('p1_2', 1, 10);
-    expect(p.isPackUnlocked(packs, 1)).toBe(true);
-    expect(p.isPackUnlocked(packs, 2)).toBe(false);
-    expect(p.isPackUnlocked(packs, 9)).toBe(false);
-    expect(p.solvedIn(packs[0]!)).toBe(2);
-    expect(p.starsIn(packs[0]!)).toBe(4);
-  });
-
-  it('наборы без порога (unlockAfter = 0) открыты сразу', () => {
-    const packs = [pack('p1', 3, 0), pack('p2', 3, 0)];
-    expect(new ProgressStore().isPackUnlocked(packs, 1)).toBe(true);
+    expect(p.solvedCount).toBe(0);
+    expect(calls).toBe(1);
+    unsub();
+    p.load(null);
+    expect(calls).toBe(1);
+    expect(p.toSection()).toEqual({ v: 1, levels: {} });
   });
 });
 
-describe('parseProgress / mergeProgress', () => {
-  it('отбрасывает мусор', () => {
-    expect(parseProgress(null)).toEqual({ v: 1, levels: {} });
-    expect(parseProgress({ levels: 5 })).toEqual({ v: 1, levels: {} });
-    const p = parseProgress({
-      levels: {
-        ok: { stars: 2, time: 12.34 },
-        badStars: { stars: 4, time: 1 },
-        zeroStars: { stars: 0, time: 1 },
-        fracStars: { stars: 1.5, time: 1 },
-        badTime: { stars: 1, time: -1 },
-        nanTime: { stars: 1, time: Number.NaN },
-        str: { stars: '3', time: 1 },
-        nul: null,
-      },
+describe('сохранение: разделы и настройки', () => {
+  it('разделы не затирают друг друга, незнакомые ключи сохраняются', async () => {
+    const saves: Array<[SaveBlob, boolean]> = [];
+    const save = new SaveStore(async (b, f) => void saves.push([b, f]));
+    save.load({ future: 42, [SETTINGS_KEY]: { music: false } });
+    const p = new ProgressStore(save);
+    p.load(save.get(PROGRESS_KEY));
+    p.record('a', 3, 10, 0);
+    save.set(SETTINGS_KEY, { music: true }, false);
+    expect(saves).toHaveLength(2);
+    expect(saves[0]![1]).toBe(true);
+    expect(saves[1]![0]).toEqual({
+      future: 42,
+      [SETTINGS_KEY]: { music: true },
+      [PROGRESS_KEY]: { v: 1, levels: { a: [3, 10, 0] } },
     });
-    expect(p.levels).toEqual({ ok: { stars: 2, time: 12.3 } });
+    save.load(null);
+    expect(save.snapshot()).toEqual({});
+    save.load([1, 2] as unknown as SaveBlob);
+    expect(save.snapshot()).toEqual({});
   });
 
-  it('сливает два прогресса, беря лучшее по каждому уровню', () => {
-    const a = parseProgress({ levels: { x: { stars: 3, time: 60 }, y: { stars: 1, time: 9 } } });
-    const b = parseProgress({ levels: { x: { stars: 2, time: 30 }, z: { stars: 2, time: 5 } } });
-    expect(mergeProgress(a, b).levels).toEqual({
-      x: { stars: 3, time: 30 },
-      y: { stars: 1, time: 9 },
-      z: { stars: 2, time: 5 },
-    });
-  });
-});
-
-describe('parseSave', () => {
-  it('берёт только известные булевы настройки', () => {
-    const s = parseSave({ settings: { music: false, sound: 'no', junk: true }, progress: {} });
-    expect(s.settings).toEqual({ music: false });
-    expect(parseSave(null)).toEqual({ settings: {}, progress: { v: 1, levels: {} } });
-  });
-});
-
-describe('SaveManager', () => {
-  function mem() {
-    const data = new Map<string, string>();
-    return {
-      data,
-      storage: {
-        getItem: (k: string) => data.get(k) ?? null,
-        setItem: (k: string, v: string) => void data.set(k, v),
-      },
-    };
-  }
-
-  it('склеивает частые правки, flush пишет сразу, загрузка восстанавливает', async () => {
-    vi.useFakeTimers();
-    try {
-      const { storage } = mem();
-      const platform = new MockPlatform({ storage });
-      const settings = new SettingsStore();
-      const progress = new ProgressStore();
-      const save = new SaveManager(platform, settings, progress, { debounceMs: 500 });
-      await save.start();
-      expect(platform.log.filter((l) => l.startsWith('save'))).toEqual([]);
-
-      settings.set('music', false);
-      settings.set('sound', false);
-      progress.record('a', 2, 33);
-      vi.advanceTimersByTime(499);
-      expect(platform.log.filter((l) => l.startsWith('save'))).toEqual([]);
-      vi.advanceTimersByTime(2);
-      await vi.advanceTimersByTimeAsync(0);
-      expect(platform.log.filter((l) => l.startsWith('save'))).toHaveLength(1);
-
-      progress.record('b', 3, 20);
-      await save.flush();
-      expect(platform.log.filter((l) => l.startsWith('save'))).toHaveLength(2);
-      await save.flush(); // нечего писать
-      expect(platform.log.filter((l) => l.startsWith('save'))).toHaveLength(2);
-
-      // «Новый запуск» с тем же хранилищем.
-      const settings2 = new SettingsStore();
-      const progress2 = new ProgressStore();
-      await new SaveManager(new MockPlatform({ storage }), settings2, progress2).start();
-      expect(settings2.get().music).toBe(false);
-      expect(settings2.get().sound).toBe(false);
-      expect(settings2.get().vibration).toBe(true);
-      expect(progress2.get('a')).toEqual({ stars: 2, time: 33 });
-      expect(progress2.get('b')).toEqual({ stars: 3, time: 20 });
-    } finally {
-      vi.useRealTimers();
-    }
-  });
-
-  it('повреждённое сохранение не ломает запуск', async () => {
-    const { storage, data } = mem();
-    data.set('cube-sculptor/mock-cloud', '{oops');
-    const progress = new ProgressStore();
-    await new SaveManager(new MockPlatform({ storage }), new SettingsStore(), progress).start();
-    expect(progress.toJSON()).toEqual({ v: 1, levels: {} });
-  });
-
-  it('ошибка записи не теряет изменения: следующий flush повторит', async () => {
-    const platform = new MockPlatform({ storage: null });
-    const save = new SaveManager(platform, new SettingsStore(), new ProgressStore(), {
-      debounceMs: 10_000,
-    });
-    await save.start();
-    let fail = true;
-    const spy = vi.spyOn(platform, 'saveData').mockImplementation(async () => {
-      if (fail) throw new Error('offline');
-    });
-    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
-    (save as unknown as { progress: ProgressStore }).progress.record('a', 1, 1);
-    await save.flush();
-    fail = false;
-    await save.flush();
-    expect(spy).toHaveBeenCalledTimes(2);
-    warn.mockRestore();
+  it('настройки из сохранения: только известные булевы ключи', () => {
+    const s = new SettingsStore();
+    s.loadSaved({ music: false, sound: 'yes', vibration: false, unknown: true });
+    expect(s.get()).toMatchObject({ music: false, sound: true, vibration: false });
+    expect(s.get()).not.toHaveProperty('unknown');
+    s.loadSaved(null);
+    expect(s.get().music).toBe(false);
   });
 });

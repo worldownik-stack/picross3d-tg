@@ -1,0 +1,20 @@
+{
+ "id": "fx_05",
+ "size": [
+  5,
+  8,
+  5
+ ],
+ "palette": [
+  "#8a5bbf",
+  "#8fc3e8",
+  "#c28fd6",
+  "#8b5a2b"
+ ],
+ "cells": "BwABAQMAAwECAAMBAgADAhYAAwEBAAoBBQIBAAMCAwABAgkAAQECAA8BBQIBAAMCAgADAgMAAQQIAAMBAQAKAQUCAQADAgMAAQIOAAEDAwABAwIBAgACAQEDAgADAhAA",
+ "stats": {
+  "filled": 92,
+  "fillRatio": 0.46,
+  "colors": 4
+ }
+}

@@ -1355,23 +1355,9 @@
             "en": "Light bulb"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a classic light bulb standing upright",
-            "colors": "pale yellow glass, grey screw base",
-            "maxSize": 6
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "home_09",
@@ -1391,23 +1377,9 @@
             "en": "Boot"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a single rubber rain boot",
-            "colors": "yellow boot, dark sole",
-            "maxSize": 6
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         }
       ],
       "maxSize": 6
@@ -1429,23 +1401,9 @@
             "en": "Fir tree"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a cone-shaped fir tree with a short trunk",
-            "colors": "dark green tree, brown trunk",
-            "maxSize": 6
+            "kind": "vox"
           },
-          "anim": "wobble",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "wobble"
         },
         {
           "id": "nat_02",
@@ -1454,23 +1412,9 @@
             "en": "Tree"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a round leafy tree with a thick trunk",
-            "colors": "light green crown, brown trunk",
-            "maxSize": 6
+            "kind": "vox"
           },
-          "anim": "wobble",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "wobble"
         },
         {
           "id": "nat_03",
@@ -1479,23 +1423,9 @@
             "en": "Cactus"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a saguaro cactus with two arms in a clay pot",
-            "colors": "green cactus, terracotta pot",
-            "maxSize": 6
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "nat_04",
@@ -1504,23 +1434,9 @@
             "en": "Tulip"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a tulip flower in a small pot",
-            "colors": "red petals, green stem and leaves, terracotta pot",
-            "maxSize": 6
+            "kind": "vox"
           },
-          "anim": "wobble",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "wobble"
         },
         {
           "id": "nat_05",
@@ -1529,23 +1445,9 @@
             "en": "Sunflower"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a sunflower with a big round flower head facing forward",
-            "colors": "yellow petals, brown center, green stem",
-            "maxSize": 6
+            "kind": "vox"
           },
-          "anim": "wobble",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "wobble"
         },
         {
           "id": "nat_06",
@@ -1554,23 +1456,9 @@
             "en": "Snowman"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a snowman of three snowballs with a carrot nose and a bucket hat",
-            "colors": "white snow, orange nose, black hat",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "wobble",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "wobble"
         },
         {
           "id": "nat_07",
@@ -1579,23 +1467,9 @@
             "en": "Rainbow"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a thick rainbow arch standing on two small clouds",
-            "colors": "red, orange, yellow, green, blue bands, white clouds",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "bob",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "bob"
         },
         {
           "id": "nat_08",
@@ -1604,23 +1478,9 @@
             "en": "Volcano"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a cone volcano with lava at the top",
-            "colors": "brown rock, orange lava",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "nat_09",
@@ -1629,23 +1489,9 @@
             "en": "Acorn"
           },
           "source": {
-            "kind": "meshy",
-            "object": "an acorn with a textured cap and a tiny stem",
-            "colors": "light brown nut, dark brown cap",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "nat_10",
@@ -1654,23 +1500,9 @@
             "en": "Mountain"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a mountain with a snowy peak",
-            "colors": "grey rock, white snow cap, green base",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         }
       ],
       "maxSize": 7
@@ -1776,23 +1608,9 @@
             "en": "Puppy"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a sitting puppy with floppy ears",
-            "colors": "beige fur, brown ears, black nose",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "pet_03",
@@ -1801,23 +1619,9 @@
             "en": "Bunny"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a sitting bunny with tall upright ears",
-            "colors": "white fur, pink inner ears",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "pet_04",
@@ -1826,23 +1630,9 @@
             "en": "Piggy"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a round pig standing on four short legs, side view",
-            "colors": "pink pig, darker pink snout",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "pet_05",
@@ -1851,23 +1641,9 @@
             "en": "Duck"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a standing duck, side profile",
-            "colors": "white body, orange beak and feet",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "pet_06",
@@ -1876,23 +1652,9 @@
             "en": "Chick"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a round fluffy chick",
-            "colors": "yellow chick, orange beak",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "pet_07",
@@ -1901,23 +1663,9 @@
             "en": "Sheep"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a fluffy sheep on four short legs",
-            "colors": "white wool, dark grey face and legs",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "pet_08",
@@ -1926,23 +1674,9 @@
             "en": "Cow"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a cow standing on four legs with small horns",
-            "colors": "white with black patches, pink muzzle",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "pet_09",
@@ -1951,23 +1685,9 @@
             "en": "Snail"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a snail with a big spiral shell",
-            "colors": "brown shell, light green body",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "pet_10",
@@ -1976,23 +1696,9 @@
             "en": "Turtle"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a walking turtle with a domed shell",
-            "colors": "green shell, light green skin",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         }
       ],
       "maxSize": 7
@@ -2014,23 +1720,9 @@
             "en": "Whale"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a chubby whale with a water spout",
-            "colors": "blue whale, light belly, white spout",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "sea_02",
@@ -2039,23 +1731,9 @@
             "en": "Fish"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a round tropical fish with big fins",
-            "colors": "orange fish, white stripes",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "sea_03",
@@ -2064,23 +1742,9 @@
             "en": "Octopus"
           },
           "source": {
-            "kind": "meshy",
-            "object": "an octopus with a round head and curled tentacles",
-            "colors": "purple octopus",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "sea_04",
@@ -2089,23 +1753,9 @@
             "en": "Crab"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a crab with two big claws raised",
-            "colors": "red crab",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "sea_05",
@@ -2114,23 +1764,9 @@
             "en": "Starfish"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a thick five-armed starfish",
-            "colors": "orange starfish",
-            "maxSize": 7
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "sea_06",
@@ -2139,23 +1775,9 @@
             "en": "Jellyfish"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a jellyfish with a dome and wavy tentacles",
-            "colors": "pink jellyfish",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "bob",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "bob"
         },
         {
           "id": "sea_07",
@@ -2164,23 +1786,9 @@
             "en": "Seahorse"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a seahorse with a curled tail, side profile",
-            "colors": "yellow seahorse",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "sea_08",
@@ -2189,23 +1797,9 @@
             "en": "Shark"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a friendly shark, side profile",
-            "colors": "grey shark, white belly",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "sea_09",
@@ -2214,23 +1808,9 @@
             "en": "Penguin"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a standing penguin",
-            "colors": "black back, white belly, orange beak and feet",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         },
         {
           "id": "sea_10",
@@ -2239,23 +1819,9 @@
             "en": "Dolphin"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a jumping dolphin, side profile",
-            "colors": "light blue-grey dolphin",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "hop",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "hop"
         }
       ],
       "maxSize": 8
@@ -2277,23 +1843,9 @@
             "en": "Car"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a small cartoon car",
-            "colors": "red body, blue windows, black wheels",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "tr_02",
@@ -2302,23 +1854,9 @@
             "en": "Bus"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a city bus",
-            "colors": "yellow bus, blue windows, black wheels",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "tr_03",
@@ -2327,23 +1865,9 @@
             "en": "Fire truck"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a fire truck with a ladder on top",
-            "colors": "red truck, silver ladder, black wheels",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "tr_04",
@@ -2352,23 +1876,9 @@
             "en": "Steam engine"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a steam locomotive with a big chimney",
-            "colors": "black and red locomotive, gold trim",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "tr_05",
@@ -2476,23 +1986,9 @@
             "en": "Helicopter"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a helicopter with a top rotor",
-            "colors": "orange helicopter, blue windows, grey rotor",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "bob",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "bob"
         },
         {
           "id": "tr_07",
@@ -2501,23 +1997,9 @@
             "en": "Sailboat"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a sailboat with one big sail",
-            "colors": "brown hull, white sail",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "tr_08",
@@ -2526,23 +2008,9 @@
             "en": "Submarine"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a submarine with a periscope",
-            "colors": "yellow submarine, round blue windows",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "tr_09",
@@ -2551,23 +2019,9 @@
             "en": "Tractor"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a farm tractor with big rear wheels",
-            "colors": "green tractor, yellow wheels",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "tr_10",
@@ -2576,23 +2030,9 @@
             "en": "Hot air balloon"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a hot air balloon with a basket",
-            "colors": "red and yellow balloon, brown basket",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "bob",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "bob"
         }
       ],
       "maxSize": 8
@@ -2614,23 +2054,9 @@
             "en": "Guitar"
           },
           "source": {
-            "kind": "meshy",
-            "object": "an acoustic guitar standing upright",
-            "colors": "orange-brown body, dark neck, black sound hole",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "toy_02",
@@ -2639,23 +2065,9 @@
             "en": "Drum"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a snare drum with two drumsticks on top",
-            "colors": "red drum, white top, tan sticks",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "toy_03",
@@ -2664,23 +2076,9 @@
             "en": "Trumpet"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a trumpet, side view",
-            "colors": "gold trumpet",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "toy_04",
@@ -2689,23 +2087,9 @@
             "en": "Grand piano"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a small grand piano with an open lid",
-            "colors": "black piano, white keys",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "toy_05",
@@ -2714,23 +2098,9 @@
             "en": "Gamepad"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a generic game controller without any brand",
-            "colors": "dark grey controller, colored buttons",
-            "maxSize": 8
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "toy_06",
@@ -2739,23 +2109,9 @@
             "en": "Rook"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a chess rook",
-            "colors": "white chess piece",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "toy_07",
@@ -2764,23 +2120,9 @@
             "en": "Knight"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a chess knight",
-            "colors": "black chess piece",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "toy_08",
@@ -2789,23 +2131,9 @@
             "en": "Spinning top"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a spinning top",
-            "colors": "red and yellow stripes",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "wobble",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "wobble"
         },
         {
           "id": "toy_09",
@@ -2814,23 +2142,9 @@
             "en": "Teddy bear"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a sitting teddy bear",
-            "colors": "light brown fur, darker muzzle",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "toy_10",
@@ -2839,23 +2153,9 @@
             "en": "Rocking horse"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a rocking horse",
-            "colors": "white horse, red saddle, brown rockers",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "wobble",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "wobble"
         }
       ],
       "maxSize": 9
@@ -2877,23 +2177,9 @@
             "en": "Anvil"
           },
           "source": {
-            "kind": "meshy",
-            "object": "an anvil",
-            "colors": "dark grey metal",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "ws_02",
@@ -2902,23 +2188,9 @@
             "en": "Magnet"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a horseshoe magnet",
-            "colors": "red magnet, silver tips",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "ws_03",
@@ -2927,23 +2199,9 @@
             "en": "Toolbox"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a toolbox with a handle",
-            "colors": "red box, silver handle",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "ws_04",
@@ -2952,23 +2210,9 @@
             "en": "Hammer"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a claw hammer lying flat",
-            "colors": "grey head, brown handle",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "ws_05",
@@ -2977,23 +2221,9 @@
             "en": "Wrench"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a wrench lying flat",
-            "colors": "silver metal",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "ws_06",
@@ -3002,23 +2232,9 @@
             "en": "Paint can"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a paint can with a brush sticking out",
-            "colors": "blue paint, silver can, brown brush",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "ws_07",
@@ -3027,23 +2243,9 @@
             "en": "Axe in a stump"
           },
           "source": {
-            "kind": "meshy",
-            "object": "an axe stuck in a tree stump",
-            "colors": "brown stump, grey axe head, tan handle",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "ws_08",
@@ -3052,23 +2254,9 @@
             "en": "Lantern"
           },
           "source": {
-            "kind": "meshy",
-            "object": "an old lantern with a handle on top",
-            "colors": "black frame, yellow glowing glass",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "wobble",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "wobble"
         },
         {
           "id": "ws_09",
@@ -3077,23 +2265,9 @@
             "en": "Padlock"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a padlock",
-            "colors": "gold body, silver shackle",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "ws_10",
@@ -3102,23 +2276,9 @@
             "en": "Wheelbarrow"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a wheelbarrow with one wheel",
-            "colors": "green tub, black wheel, brown handles",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         }
       ],
       "maxSize": 9
@@ -3140,23 +2300,9 @@
             "en": "Castle tower"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a castle tower with battlements and a small flag",
-            "colors": "grey stone, red flag, blue roof",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "fx_02",
@@ -3165,23 +2311,9 @@
             "en": "Baby dragon"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a chubby friendly baby dragon sitting",
-            "colors": "green dragon, yellow belly, small wings",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "fx_03",
@@ -3190,23 +2322,9 @@
             "en": "Treasure chest"
           },
           "source": {
-            "kind": "meshy",
-            "object": "an open treasure chest full of gold coins",
-            "colors": "brown wood, gold coins, metal bands",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "fx_04",
@@ -3215,23 +2333,9 @@
             "en": "Crown"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a royal crown with gems",
-            "colors": "gold crown, red and blue gems",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "fx_05",
@@ -3240,23 +2344,9 @@
             "en": "Potion"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a round potion bottle with a cork",
-            "colors": "purple liquid, clear glass, brown cork",
-            "maxSize": 9
+            "kind": "vox"
           },
-          "anim": "wobble",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "wobble"
         },
         {
           "id": "fx_06",
@@ -3265,23 +2355,9 @@
             "en": "Wizard hat"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a tall pointed wizard hat with a wide brim",
-            "colors": "dark blue hat, yellow band",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "fx_07",
@@ -3290,23 +2366,9 @@
             "en": "Jack-o'-lantern"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a carved pumpkin lantern",
-            "colors": "orange pumpkin, green stem, dark carved face",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "wobble",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "wobble"
         },
         {
           "id": "fx_08",
@@ -3315,23 +2377,9 @@
             "en": "Gift"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a gift box with a big bow on top",
-            "colors": "red box, yellow ribbon",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "fx_09",
@@ -3340,23 +2388,9 @@
             "en": "Birthday cake"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a two-tier birthday cake with candles",
-            "colors": "pink cake, white cream, colorful candles",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "fx_10",
@@ -3365,23 +2399,9 @@
             "en": "Ghost"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a cute floating ghost",
-            "colors": "white ghost, black eyes",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "bob",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "bob"
         }
       ],
       "maxSize": 10
@@ -3403,23 +2423,9 @@
             "en": "Rocket"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a classic rocket with three fins",
-            "colors": "white body, red nose and fins, blue window",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "bob",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "bob"
         },
         {
           "id": "sp_02",
@@ -3428,23 +2434,9 @@
             "en": "UFO"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a flying saucer with a glass dome",
-            "colors": "silver saucer, light blue dome, yellow lights",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "bob",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "bob"
         },
         {
           "id": "sp_03",
@@ -3453,23 +2445,9 @@
             "en": "Ringed planet"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a planet with a wide tilted ring",
-            "colors": "orange planet, beige ring",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "bob",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "bob"
         },
         {
           "id": "sp_04",
@@ -3478,23 +2456,9 @@
             "en": "Space helmet"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a space helmet with a large visor",
-            "colors": "white helmet, dark gold visor",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "sp_05",
@@ -3503,23 +2467,9 @@
             "en": "Satellite"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a satellite with two solar panels",
-            "colors": "silver body, blue panels",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "bob",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "bob"
         },
         {
           "id": "sp_06",
@@ -3528,23 +2478,9 @@
             "en": "Robot"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a boxy friendly robot standing",
-            "colors": "light grey robot, blue eyes, red antenna",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "sp_07",
@@ -3553,23 +2489,9 @@
             "en": "Microscope"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a microscope",
-            "colors": "white and black microscope",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "sp_08",
@@ -3578,23 +2500,9 @@
             "en": "Telescope"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a telescope on a tripod",
-            "colors": "blue tube, brown tripod",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "sp_09",
@@ -3603,23 +2511,9 @@
             "en": "Flask"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a round-bottom flask with liquid",
-            "colors": "clear glass, green liquid",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         },
         {
           "id": "sp_10",
@@ -3628,23 +2522,9 @@
             "en": "Moon rover"
           },
           "source": {
-            "kind": "meshy",
-            "object": "a six-wheeled moon rover",
-            "colors": "silver body, gold foil, black wheels",
-            "maxSize": 10
+            "kind": "vox"
           },
-          "anim": "spin",
-          "meshy": {
-            "preview": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "refine": {
-              "taskId": null,
-              "status": "pending"
-            },
-            "regenerations": 0
-          }
+          "anim": "spin"
         }
       ],
       "maxSize": 10

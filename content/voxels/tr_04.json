@@ -1,0 +1,20 @@
+{
+ "id": "tr_04",
+ "size": [
+  8,
+  6,
+  4
+ ],
+ "palette": [
+  "#262424",
+  "#c9a227",
+  "#c8373b",
+  "#f6d155"
+ ],
+ "cells": "AgMBAAIDAQACAwgCCAEFAAEBAQQBAQUAAwEQAAgCCAEBAgUBAQQBAQEAAQEDAAMBAQABAQ4ACAIIAQECBQEBBAEBAQABAQMAAwEBAAEBBgACAwEAAgMBAAIDCAIIAQUAAQEBBAEBBQADAQgA",
+ "stats": {
+  "filled": 114,
+  "fillRatio": 0.594,
+  "colors": 4
+ }
+}

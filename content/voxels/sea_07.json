@@ -1,0 +1,19 @@
+{
+ "id": "sea_07",
+ "size": [
+  5,
+  8,
+  2
+ ],
+ "palette": [
+  "#f6d155",
+  "#f5b04a",
+  "#262424"
+ ],
+ "cells": "AQADAQIAAQEBAAEBAgADAgEAAQIDAQEABAICAAIBAwABAQEDAgEBAAEBAQABAQIAAwECAAEBAQABAQIAAwIBAAECAwEBAAQCAgACAQMAAQEBAwIBAQABAQEAAQEBAA==",
+ "stats": {
+  "filled": 48,
+  "fillRatio": 0.6,
+  "colors": 3
+ }
+}

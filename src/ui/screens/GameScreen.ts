@@ -1,7 +1,9 @@
 import type { AppContext } from '../../app/context';
+import type { HapticKind } from '../../platform';
 import type { Level } from '../../core/level';
 import type { Axis } from '../../core/types';
-import { LevelController } from '../../game/LevelController';
+import { LevelController, type LevelFx } from '../../game/LevelController';
+import type { Sfx } from '../../audio/Sound';
 import { LevelInput } from '../../game/LevelInput';
 import { t, tx } from '../../i18n';
 import { GlyphAtlas } from '../../render/glyphAtlas';
@@ -13,7 +15,17 @@ import { closeAllModals, openModal, toast, type ModalHandle } from '../modal';
 import { Screen, type ScreenParams } from '../router';
 import { formatTime, GameHud } from '../hud/GameHud';
 import { SliceHandles } from '../hud/SliceHandles';
+import { hasTutorial, Tutorial, type TutorialEvent } from '../hud/Tutorial';
 import { starsEl } from './common';
+
+const FX_SOUND: Record<LevelFx, Sfx> = {
+  break: 'hit',
+  miss: 'miss',
+  bonk: 'bonk',
+  mark: 'mark',
+  unmark: 'unmark',
+  solved: 'win',
+};
 
 /** Экран уровня (§2–3): 3D-блок, HUD, срезы, пауза, итог. */
 export class GameScreen extends Screen {
@@ -23,6 +35,7 @@ export class GameScreen extends Screen {
   private level: Level | null = null;
   private input: LevelInput | null = null;
   private handles: SliceHandles | null = null;
+  private tutorial: Tutorial | null = null;
   private readonly hud: GameHud;
   private readonly titleEl: HTMLElement;
   private readonly sheet: HTMLElement;
@@ -91,7 +104,10 @@ export class GameScreen extends Screen {
       () => this.inputEnabled(),
     );
     this.el.insertBefore(this.handles.el, this.hud.el);
-    r.onAfterRender(() => this.handles?.update());
+    r.onAfterRender(() => {
+      this.handles?.update();
+      this.tutorial?.update();
+    });
     this.input = new LevelInput({
       renderer: r,
       controller: () => this.controller,
@@ -140,21 +156,31 @@ export class GameScreen extends Screen {
     this.controller = new LevelController(r, level, this.atlas!, () => this.app.settings.get(), {
       onChange: () => this.syncHud(),
       onMiss: () => {
-        if (this.app.settings.get().vibration) this.app.platform.haptic?.('miss');
+        this.haptic('miss');
         this.syncHud();
       },
       onWin: () => {
-        if (this.app.settings.get().vibration) this.app.platform.haptic?.('win');
+        this.haptic('win');
         this.showWin();
       },
       onLose: () => {
-        if (this.app.settings.get().vibration) this.app.platform.haptic?.('fail');
+        this.haptic('fail');
         this.showFail();
+      },
+      onFx: (kind) => {
+        this.app.sound.play(FX_SOUND[kind]);
+        if (kind === 'solved') this.tutorial?.hide();
+        else this.tutorial?.notify(kind);
       },
     });
     r.orbit.az = DEFAULT_AZ;
     r.orbit.pitch = DEFAULT_PITCH;
     r.orbit.zoom = 1;
+    // Обучение (§4) — на уровнях обучения, пока уровень не решён.
+    if (hasTutorial(level.id) && !this.app.progress.isSolved(level.id)) {
+      this.tutorial = new Tutorial(level.id, this.controller);
+      this.el.append(this.tutorial.el);
+    }
     this.userPaused = false;
     this.sliceAxis = 1;
     this.syncHud();
@@ -180,6 +206,8 @@ export class GameScreen extends Screen {
   }
 
   private disposeLevel(): void {
+    this.tutorial?.dispose();
+    this.tutorial = null;
     this.controller?.dispose();
     this.controller = null;
     this.level = null;
@@ -258,6 +286,7 @@ export class GameScreen extends Screen {
     if (!ctl) return;
     ctl.tool = tool;
     this.syncHud();
+    this.tutorial?.notify(tool satisfies TutorialEvent);
   }
 
   private setBrushHeld(on: boolean): void {
@@ -352,6 +381,11 @@ export class GameScreen extends Screen {
     void this.app.platform.showFullscreenAd();
   }
 
+  /** Тактильный отклик платформы (Telegram HapticFeedback), если включена вибрация. */
+  private haptic(kind: HapticKind): void {
+    if (this.app.settings.get().vibration) this.app.platform.haptic?.(kind);
+  }
+
   private restart(): Promise<void> {
     return this.enter(this.params);
   }
@@ -375,8 +409,7 @@ export class GameScreen extends Screen {
     this.titleEl.textContent = tx(level.title);
     this.titleEl.classList.add('shown');
     const s = ctl.session;
-    const { previous, best } = this.app.progress.record(level.id, s.stars(), s.elapsed);
-    void this.app.save.flush();
+    this.app.progress.record(level.id, s.stars(), s.elapsed, s.totalMistakes);
     clear(this.sheet);
     this.sheet.append(
       starsEl(s.stars()),
@@ -395,14 +428,6 @@ export class GameScreen extends Screen {
           h('span', { text: t('result.mistakes') }),
           h('b', { text: String(s.totalMistakes) }),
         ),
-        previous
-          ? h(
-              'div',
-              null,
-              h('span', { text: t('result.bestTime') }),
-              h('b', { text: formatTime(best.time) }),
-            )
-          : null,
       ),
       h(
         'div',
@@ -427,7 +452,7 @@ export class GameScreen extends Screen {
             label: t('result.collection'),
             testId: 'result-collection',
           },
-          () => void this.app.router.go('collection'),
+          () => void this.app.router.go('collection', { levelId: level.id }),
         ),
       ),
     );
@@ -441,22 +466,12 @@ export class GameScreen extends Screen {
     this.titleEl.textContent = '';
   }
 
-  /** Открыт ли набор для игрока (в debug-режиме открыто всё). */
-  private isOpen(packId: string): boolean {
-    if (__DEBUG__ && new URLSearchParams(location.search).has('debug')) return true;
-    const packs = this.app.content.packs.filter((p) => !p.debugOnly);
-    return this.app.progress.isPackUnlocked(
-      packs,
-      packs.findIndex((p) => p.id === packId),
-    );
-  }
-
   private async next(): Promise<void> {
     const cur = this.params;
     const nxt = this.app.levels.next(cur.packId ?? '', cur.levelId ?? '');
     await this.app.platform.showFullscreenAd();
     if (!this.active) return;
-    if (nxt && this.isOpen(nxt.packId)) void this.app.router.go('game', nxt);
+    if (nxt) void this.app.router.go('game', nxt);
     else void this.app.router.go('packs');
   }
 

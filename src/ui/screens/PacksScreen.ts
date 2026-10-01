@@ -1,6 +1,8 @@
 import type { AppContext } from '../../app/context';
 import { t, tx } from '../../i18n';
 import { clear, h } from '../dom';
+import { ICONS } from '../icons';
+import { toast } from '../modal';
 import { Screen } from '../router';
 import { topbar } from './common';
 
@@ -18,34 +20,49 @@ export class PacksScreen extends Screen {
 
   enter(): void {
     clear(this.grid);
-    const packs = this.app.content.packs.filter((p) => !p.debugOnly || __DEBUG__);
-    // В debug-режиме (?debug=1) наборы не блокируются.
-    const openAll = __DEBUG__ && new URLSearchParams(location.search).has('debug');
-    // Замки считаются по наборам, видимым игроку.
-    const visible = packs.filter((p) => !p.debugOnly);
-    packs.forEach((pack) => {
-      const idx = visible.indexOf(pack);
-      const unlocked = openAll || idx < 0 || this.app.progress.isPackUnlocked(visible, idx);
+    const { progress, content } = this.app;
+    const packs = content.packs.filter((p) => !p.debugOnly || __DEBUG__);
+    for (const pack of packs) {
+      const open = progress.isPackUnlocked(content.packs, pack.id);
+      const solved = progress.solvedIn(pack);
+      const total = pack.levels.length;
       const card = h(
         'button',
         {
-          class: unlocked ? 'card' : 'card locked',
-          attrs: { type: 'button', 'data-testid': `pack-${pack.id}`, disabled: !unlocked },
-          on: { click: () => void this.app.router.go('levels', { packId: pack.id }) },
+          class: `card pack-card${open ? '' : ' locked'}${solved === total && total ? ' done' : ''}`,
+          attrs: {
+            type: 'button',
+            'data-testid': `pack-${pack.id}`,
+            'aria-disabled': String(!open),
+          },
+          on: {
+            click: () => {
+              if (open) void this.app.router.go('levels', { packId: pack.id });
+              else toast(t('packs.locked', { n: pack.unlockAfter }));
+            },
+          },
         },
         h('span', { class: 'card-title', text: tx(pack.title) }),
-        h('span', {
-          class: 'card-sub',
-          text: unlocked
-            ? t('packs.progress', {
-                solved: this.app.progress.solvedIn(pack),
-                total: pack.levels.length,
-              })
-            : t('packs.locked', { n: pack.unlockAfter }),
-        }),
       );
+      if (open) {
+        card.append(
+          h('span', { class: 'card-sub', text: t('packs.progress', { solved, total }) }),
+          h(
+            'span',
+            { class: 'pack-bar' },
+            h('span', { attrs: { style: `width:${total ? (solved / total) * 100 : 0}%` } }),
+          ),
+        );
+      } else {
+        const lock = h('span', { class: 'card-lock' });
+        lock.innerHTML = ICONS.lock;
+        card.append(
+          lock,
+          h('span', { class: 'card-sub', text: t('packs.locked', { n: pack.unlockAfter }) }),
+        );
+      }
       this.grid.append(card);
-    });
+    }
   }
 
   override back(): boolean {

@@ -65,7 +65,6 @@ export class SettingsScreen extends Screen {
         button({ variant: 'danger', label: t('common.yes'), testId: 'confirm-yes' }, () => {
           m.close();
           this.app.progress.reset();
-          void this.app.save.flush();
         }),
         button({ variant: 'secondary', label: t('common.no'), testId: 'confirm-no' }, () =>
           m.close(),

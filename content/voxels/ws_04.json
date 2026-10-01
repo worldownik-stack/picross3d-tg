@@ -1,0 +1,19 @@
+{
+ "id": "ws_04",
+ "size": [
+  7,
+  8,
+  2
+ ],
+ "palette": [
+  "#8d8a85",
+  "#8b5a2b",
+  "#5e3a22"
+ ],
+ "cells": "AwABAwYAAQMGAAECBgABAgYAAQIGAAECAgAGAQEABwEEAAEDBgABAwYAAQIGAAECBgABAgYAAQICAAYBAQAHAQEA",
+ "stats": {
+  "filled": 38,
+  "fillRatio": 0.339,
+  "colors": 3
+ }
+}

@@ -21,6 +21,9 @@ import {
 import type { GlyphAtlas } from '../render/glyphAtlas';
 import type { Renderer } from '../render/Renderer';
 
+/** Игровые события для звука и обучения. */
+export type LevelFx = 'break' | 'miss' | 'bonk' | 'mark' | 'unmark' | 'solved';
+
 export interface LevelEvents {
   /** Изменились промахи, инструмент, срез и т. п. — обновить HUD. */
   onChange(): void;
@@ -28,6 +31,8 @@ export interface LevelEvents {
   /** Волна окраски закончилась, фигура «ожила». */
   onWin(): void;
   onLose(): void;
+  /** Звуки и обучение: каждый удар, пометка, решение. */
+  onFx?(kind: LevelFx, cell: number): void;
 }
 
 /** Порог сдвига указателя (px) для фиксации оси протяжки. */
@@ -259,18 +264,26 @@ export class LevelController {
         if (i === this.hover) this.setHover(-1);
         this.view.cellCenter(i, this.c);
         this.renderer.particles.burst(this.c.x, this.c.y, this.c.z, CUBE_COLORS.stone, 7);
+        this.renderer.playTool('hammer', this.c);
         this.renderer.invalidate();
+        this.events.onFx?.('break', i);
       } else if (e.result === 'miss') {
         this.view.setFlag(i, ST_CRACKED, true);
         this.view.setFlag(i, ST_MARKED, true);
+        this.renderer.playTool('hammer', this.view.cellCenter(i, this.c));
         this.renderer.orbit.shake(0.1);
         if (this.settings().vibration && 'vibrate' in navigator) navigator.vibrate?.(70);
+        this.events.onFx?.('miss', i);
         this.events.onMiss();
       } else if (e.result === 'bonk') {
         this.flash(i);
+        this.renderer.playTool('hammer', this.view.cellCenter(i, this.c));
+        this.events.onFx?.('bonk', i);
       }
     } else {
       this.view.setFlag(i, ST_MARKED, e.result === 'marked');
+      this.renderer.playTool('brush', this.view.cellCenter(i, this.c));
+      this.events.onFx?.(e.result === 'marked' ? 'mark' : 'unmark', i);
     }
   };
 
@@ -370,6 +383,7 @@ export class LevelController {
     this.setSlice({ ...NO_SLICE });
     this.renderer.orbit.reset(this.renderer.orbit.az, 0.42, 1);
     const duration = this.view.startReveal();
+    this.events.onFx?.('solved', -1);
     let t = 0;
     this.renderer.animate((dt) => {
       if (this.disposed) return false;

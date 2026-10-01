@@ -260,6 +260,16 @@ button {
 }
 
 /* ---------- Главное меню ---------- */
+.menu-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+[data-screen='menu'] > .screen-body {
+  position: relative;
+}
 .menu-logo {
   text-align: center;
   margin-bottom: 1.2rem;
@@ -406,6 +416,315 @@ button {
 .stars .icon {
   width: 1rem;
   height: 1rem;
+}
+.card-lock {
+  display: inline-flex;
+  color: var(--ink-soft);
+}
+.card-lock svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.card.locked .card-sub {
+  font-size: 0.75rem;
+}
+.pack-card.done {
+  box-shadow:
+    0 4px 0 var(--teal),
+    0 8px 14px var(--shadow);
+}
+.pack-bar {
+  width: 80%;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: var(--cream-2);
+  overflow: hidden;
+}
+.pack-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--teal);
+}
+.level-grid .card .level-num {
+  line-height: 1;
+}
+.level-grid .card.solved {
+  background: #f1fbf6;
+}
+.level-grid .card .stars .icon {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.level-grid .card .card-lock svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* ---------- Обучение: строка подсказки и рука ---------- */
+.tutorial {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+.tut-banner {
+  position: absolute;
+  top: calc(var(--safe-t) + 4.4rem);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: min(34rem, 92vw);
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 250, 242, 0.95);
+  box-shadow:
+    0 3px 0 var(--sand),
+    0 8px 18px var(--shadow);
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: center;
+  animation: pop-in 0.25s ease;
+}
+.tut-hand {
+  position: fixed;
+  width: 3.2rem;
+  height: 3.2rem;
+  filter: drop-shadow(0 3px 4px rgba(60, 35, 15, 0.35));
+  transition:
+    left 0.25s ease,
+    top 0.25s ease;
+}
+.tut-hand svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.tut-hand.tap svg {
+  transform-origin: 43% 4%;
+  animation: tut-tap 1.1s ease-in-out infinite;
+}
+.tut-hand.flip {
+  transform: rotate(180deg);
+}
+.tut-hand.drag svg {
+  animation: tut-drag 1.8s ease-in-out infinite;
+}
+@keyframes tut-tap {
+  0%,
+  100% {
+    transform: translate(0.5rem, 0.7rem) scale(1);
+  }
+  45% {
+    transform: translate(0, 0) scale(0.92);
+  }
+}
+@keyframes tut-drag {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(9rem, -0.5rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(9rem, -0.5rem);
+    opacity: 0;
+  }
+}
+@media (orientation: landscape) and (max-height: 560px) {
+  .tut-banner {
+    top: calc(var(--safe-t) + 0.6rem);
+    max-width: 52vw;
+    font-size: 0.85rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tut-hand svg {
+    animation: none !important;
+  }
+}
+
+/* ---------- Коллекция: полки по наборам ---------- */
+.topbar-count {
+  margin-left: auto;
+  font-weight: 800;
+  color: var(--ink-soft);
+}
+.screen-body:has(> .collection) {
+  justify-content: flex-start;
+}
+.collection {
+  width: 100%;
+  max-width: 48rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 0.3rem 0.5rem 1.5rem;
+}
+.collection-hint {
+  margin: 0;
+  text-align: center;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+.shelf-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 0.3rem 0.3rem;
+  color: var(--wood-dark);
+}
+.shelf-head h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+.shelf-head span {
+  font-weight: 800;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+/* Полка: ряды ячеек, под каждым рядом — деревянная доска. */
+.shelf {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.9rem 0.5rem;
+  padding: 0.6rem 0.6rem 0.9rem;
+  border-radius: var(--radius);
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(var(--slot) - 0.1rem),
+      var(--wood) calc(var(--slot) - 0.1rem),
+      var(--wood-2) calc(var(--slot) + 0.35rem),
+      transparent calc(var(--slot) + 0.35rem),
+      transparent calc(var(--slot) + 0.9rem)
+    ),
+    var(--cream-2);
+  background-position: 0 0.6rem;
+  --slot: clamp(3.6rem, 16vw, 7rem);
+}
+.slot {
+  pointer-events: auto;
+  position: relative;
+  height: var(--slot);
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.slot-figure {
+  width: 100%;
+  height: 100%;
+  background: center bottom / contain no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--ink-soft);
+  transition: transform 0.15s ease;
+}
+.slot:not(.solved) .slot-figure {
+  width: 70%;
+  height: 70%;
+  margin-bottom: 0.3rem;
+  border-radius: 0.6rem;
+  background: rgba(110, 69, 38, 0.18);
+  color: rgba(75, 51, 35, 0.55);
+}
+.slot-figure.loading {
+  opacity: 0.4;
+}
+.slot.solved:active .slot-figure {
+  transform: scale(0.94);
+}
+.slot.focus .slot-figure {
+  animation: slot-focus 1.2s ease 2;
+}
+@keyframes slot-focus {
+  50% {
+    transform: scale(1.12) translateY(-0.2rem);
+  }
+}
+/* Скрытая сцена для снимков миниатюр. */
+.thumb-studio {
+  position: fixed;
+  left: -10000px;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+}
+.modal.viewer {
+  width: min(30rem, 94vw);
+  gap: 0.5rem;
+}
+.viewer-title {
+  margin: 0;
+}
+.viewer-pack {
+  margin: 0;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+.viewer-stage {
+  width: 100%;
+  height: min(22rem, 46vh);
+  position: relative;
+}
+.viewer-stage canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* Ландшафт телефона: фигура слева, сведения и кнопки справа. */
+@media (orientation: landscape) and (max-height: 560px) {
+  .modal.viewer {
+    width: min(46rem, 94vw);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'stage title'
+      'stage pack'
+      'stage stars'
+      'stage stats'
+      'stage buttons';
+    align-items: center;
+    justify-items: center;
+    column-gap: 1rem;
+    row-gap: 0.35rem;
+    padding: 0.9rem 1rem;
+  }
+  .modal.viewer > .viewer-stage {
+    grid-area: stage;
+    height: min(18rem, 78vh);
+  }
+  .modal.viewer > .viewer-title {
+    grid-area: title;
+  }
+  .modal.viewer > .viewer-pack {
+    grid-area: pack;
+  }
+  .modal.viewer > .stars {
+    grid-area: stars;
+  }
+  .modal.viewer > .result-stats {
+    grid-area: stats;
+  }
+  .modal.viewer > .modal-buttons {
+    grid-area: buttons;
+    width: 100%;
+  }
 }
 
 /* ---------- Настройки ---------- */
